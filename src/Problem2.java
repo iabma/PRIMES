@@ -32,28 +32,6 @@ class Problem2 {
         }
     }
 
-    private static int partition(Student[] input, int startIndex,
-                                 int endIndex) {
-        int pivot = input[endIndex].modifiedGradYear;
-        int index = (startIndex - 1);
-
-        for (int i = startIndex; i < endIndex; i++) {
-            if (input[i].modifiedGradYear <= pivot) {
-                index++;
-
-                Student indexTemp = input[index];
-                input[index] = input[i];
-                input[i] = indexTemp;
-            }
-        }
-
-        Student endIndexTemp = input[index + 1];
-        input[index + 1] = input[endIndex];
-        input[endIndex] = endIndexTemp;
-
-        return index + 1;
-    }
-
     private static void countingSort() {
         int[] countArray = new int[numStudents];
 
@@ -68,15 +46,6 @@ class Problem2 {
         for (int i = numStudents - 1; i >= 0; i--) {
             students[countArray[studentsTemp[i].modifiedGradYear] - 1] = studentsTemp[i];
             countArray[studentsTemp[i].modifiedGradYear]--;
-        }
-    }
-
-    private static void quickSort(Student[] input, int startIndex, int endIndex) {
-        if (startIndex < endIndex) {
-            int partitionIndex = partition(input, startIndex, endIndex);
-
-            quickSort(input, startIndex, partitionIndex - 1);
-            quickSort(input, partitionIndex + 1, endIndex);
         }
     }
 
