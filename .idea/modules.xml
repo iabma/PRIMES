@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PRIMESINTELLIJ.iml" filepath="$PROJECT_DIR$/PRIMESINTELLIJ.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PRIMES.iml" filepath="$PROJECT_DIR$/PRIMES.iml" />
     </modules>
   </component>
 </project>
