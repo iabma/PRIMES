@@ -33,13 +33,13 @@ class Problem2 {
     }
 
     private static void countingSort() {
-        int[] countArray = new int[numStudents];
+        int[] countArray = new int[5];
 
         for (int i = 0; i < numStudents; i++) {
             countArray[studentsTemp[i].modifiedGradYear]++;
         }
 
-        for (int i = 1; i < numStudents; i++) {
+        for (int i = 1; i < 5; i++) {
             countArray[i] += countArray[i - 1];
         }
 

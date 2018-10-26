@@ -29,14 +29,14 @@ class Problem1 {
     }
 
     private static void sort() {
-        int[] countArray = new int[numStudents];
+        int[] countArray = new int[5];
         orderedStudentIDs = new String[numStudents];
 
         for (int i = 0; i < numStudents; i++) {
             countArray[gradYears[i] - earliestGradYear]++;
         }
 
-        for (int i = 1; i < numStudents; i++) {
+        for (int i = 1; i < 5; i++) {
             countArray[i] += countArray[i - 1];
         }
 
