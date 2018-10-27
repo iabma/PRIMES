@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class G3AnswerCheck {
-    private static final long NUM_ITERATIONS = 1000000000l;
+    private static final long NUM_ITERATIONS = 10000000l;
 
     public static void main(String[] args) {
         Random gen = new Random();
@@ -11,6 +11,7 @@ public class G3AnswerCheck {
 
         for (long i = 0; i < NUM_ITERATIONS; i++) {
             int pos = 1;
+            int numMoves = 0;
             while (pos != 6) {
                 int move = gen.nextInt(4);
                 if (pos == 1) {
@@ -21,9 +22,11 @@ public class G3AnswerCheck {
                     pos = move == 3 ? 6 : move + 1;
                 }
                 netTime++;
+                numMoves++;
             }
+            //System.out.println(numMoves + " moves");
         }
 
-        System.out.printf("%.5f minutes" , netTime / (double) NUM_ITERATIONS * 100.0);
+        System.out.printf("%.5f minutes" , netTime / (double) NUM_ITERATIONS);
     }
 }
