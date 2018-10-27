@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13b16084-4934-41a7-bff5-401e2dbeace3" name="Default Changelist" comment="">
+    <list default="true" id="13b16084-4934-41a7-bff5-401e2dbeace3" name="Default Changelist" comment="Created a answer checker for G1.">
+      <change afterPath="$PROJECT_DIR$/src/G1AnswerCheck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -57,23 +58,25 @@
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="java" value="1" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="16" />
-          <entry key="PLAIN_TEXT" value="73" />
+          <entry key="JAVA" value="604" />
+          <entry key="PLAIN_TEXT" value="106" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="16" />
-          <entry key="txt" value="73" />
+          <entry key="java" value="604" />
+          <entry key="txt" value="106" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="JAVA" value="1" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -93,7 +96,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Problem2.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="138">
@@ -101,6 +104,15 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/G1AnswerCheck.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -176,6 +188,7 @@
         <option value="$PROJECT_DIR$/src/main/java/test.java" />
         <option value="$PROJECT_DIR$/src/Problem1.java" />
         <option value="$PROJECT_DIR$/src/Problem2.java" />
+        <option value="$PROJECT_DIR$/src/G1AnswerCheck.java" />
       </list>
     </option>
   </component>
@@ -229,7 +242,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540520728613" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540657541351" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
@@ -245,7 +258,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Problem2">
+  <component name="RunManager" selected="Application.G1AnswerCheck">
+    <configuration name="G1AnswerCheck" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="G1AnswerCheck" />
+      <module name="PRIMES" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Problem1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Problem1" />
       <module name="PRIMES" />
@@ -279,9 +299,11 @@
       <item itemvalue="Application.Problem1" />
       <item itemvalue="Application.StudentGen" />
       <item itemvalue="Application.test" />
+      <item itemvalue="Application.G1AnswerCheck" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.G1AnswerCheck" />
         <item itemvalue="Application.Problem1" />
         <item itemvalue="Application.StudentGen" />
         <item itemvalue="Application.test" />
@@ -334,8 +356,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25282714" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25282714" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -344,7 +367,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.20821919" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.20821919" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -352,7 +375,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32876712" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32876712" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32876712" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32876712" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -396,7 +419,8 @@
     <MESSAGE value="Removed the quicksort method and its respective partition method." />
     <MESSAGE value="Added vcs.xml file." />
     <MESSAGE value="Improved efficiency of counting sort method by resizing the count array." />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved efficiency of counting sort method by resizing the count array." />
+    <MESSAGE value="Created a answer checker for G1." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created a answer checker for G1." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/AutoGenStudentDatabase.txt" />
@@ -477,6 +501,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/G1AnswerCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
         </state>
       </provider>
     </entry>
