@@ -1,18 +1,17 @@
+import java.io.File;
 import java.io.PrintWriter;
 import java.util.Scanner;
-import java.io.File;
 
-class Problem1 {
+class CS2 {
     private static int numStudents;
     private static int earliestGradYear;
-    private static String[] studentIDs;
-    private static String[] orderedStudentIDs;
-    private static int[] gradYears;
+    private static Student[] students;
+    private static Student[] studentsTemp;
 
     private static void parse(Scanner input) {
         numStudents = Integer.parseInt(input.nextLine());
-        studentIDs = new String[numStudents];
-        gradYears = new int[numStudents];
+        students = new Student[numStudents];
+        studentsTemp = new Student[numStudents];
 
         for (int i = 0; i < numStudents; i++) {
             String info = input.nextLine();
@@ -23,17 +22,21 @@ class Problem1 {
             } else if (gradYear < earliestGradYear) {
                 earliestGradYear = gradYear;
             }
-            studentIDs[i] = info;
-            gradYears[i] = gradYear;
+            students[i] = new Student(info);
+            studentsTemp[i] = students[i];
+        }
+
+        for (int i = 0; i < numStudents; i++) {
+            studentsTemp[i].setModifiedGradYear(earliestGradYear);
+            students[i].setModifiedGradYear(earliestGradYear);
         }
     }
 
-    private static void sort() {
+    private static void countingSort() {
         int[] countArray = new int[5];
-        orderedStudentIDs = new String[numStudents];
 
         for (int i = 0; i < numStudents; i++) {
-            countArray[gradYears[i] - earliestGradYear]++;
+            countArray[studentsTemp[i].modifiedGradYear]++;
         }
 
         for (int i = 1; i < 5; i++) {
@@ -41,8 +44,8 @@ class Problem1 {
         }
 
         for (int i = numStudents - 1; i >= 0; i--) {
-            orderedStudentIDs[countArray[gradYears[i] - earliestGradYear] - 1] = studentIDs[i];
-            countArray[gradYears[i] - earliestGradYear]--;
+            students[countArray[studentsTemp[i].modifiedGradYear] - 1] = studentsTemp[i];
+            countArray[studentsTemp[i].modifiedGradYear]--;
         }
     }
 
@@ -50,7 +53,7 @@ class Problem1 {
         PrintWriter out = new PrintWriter(output);
 
         for (int i = 0; i < numStudents; i++) {
-            out.println(orderedStudentIDs[i]);
+            out.println(students[i]);
         }
 
         out.close();
@@ -72,7 +75,9 @@ class Problem1 {
 
         long startTime = System.nanoTime();
 
-        sort();
+        //quickSort(students, 0, numStudents - 1);
+
+        countingSort();
 
         long endTime = System.nanoTime();
         long netTime = endTime - startTime;
