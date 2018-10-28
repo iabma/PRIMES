@@ -1,30 +1,30 @@
+import java.io.File;
 import java.io.PrintWriter;
 import java.util.Scanner;
-import java.io.File;
 
 class CS1 {
     private static int numStudents;
-    private static int earliestGradYear;
     private static String[] studentIDs;
     private static String[] orderedStudentIDs;
     private static int[] gradYears;
 
-    private static void parse(Scanner input) {
+    private static String[] read(Scanner input) {
         numStudents = Integer.parseInt(input.nextLine());
         studentIDs = new String[numStudents];
         gradYears = new int[numStudents];
+        String[] info = new String[numStudents];
 
         for (int i = 0; i < numStudents; i++) {
-            String info = input.nextLine();
-            int gradYear = Integer.parseInt(info.substring(info.length() - 4));
+            info[i] = input.nextLine();
+            studentIDs[i] = info[i];
+        }
 
-            if (i == 0) {
-                earliestGradYear = gradYear;
-            } else if (gradYear < earliestGradYear) {
-                earliestGradYear = gradYear;
-            }
-            studentIDs[i] = info;
-            gradYears[i] = gradYear;
+        return info;
+    }
+
+    private static void parse(String[] input) {
+        for (int i = 0; i < numStudents; i++) {
+            gradYears[i] = Integer.parseInt(input[i].substring(input[i].length() - 4));
         }
     }
 
@@ -33,7 +33,7 @@ class CS1 {
         orderedStudentIDs = new String[numStudents];
 
         for (int i = 0; i < numStudents; i++) {
-            countArray[gradYears[i] - earliestGradYear]++;
+            countArray[gradYears[i] - 2018]++;
         }
 
         for (int i = 1; i < 5; i++) {
@@ -41,8 +41,8 @@ class CS1 {
         }
 
         for (int i = numStudents - 1; i >= 0; i--) {
-            orderedStudentIDs[countArray[gradYears[i] - earliestGradYear] - 1] = studentIDs[i];
-            countArray[gradYears[i] - earliestGradYear]--;
+            orderedStudentIDs[countArray[gradYears[i] - 2018] - 1] = studentIDs[i];
+            countArray[gradYears[i] - 2018]--;
         }
     }
 
@@ -68,9 +68,11 @@ class CS1 {
 
         Scanner inputFile = new Scanner(input);
 
-        parse(inputFile);
+        String[] readInput = read(inputFile);
 
         long startTime = System.nanoTime();
+
+        parse(readInput);
 
         sort();
 
