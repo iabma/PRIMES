@@ -1,18 +1,23 @@
 public class Student {
-    private int graduationYear;
-    public int modifiedGradYear;
-    public double GPA;
-    public String info;
+    private int GPA;
+    private String info;
 
     public Student(String input) {
-        graduationYear = Integer.parseInt(input.substring(input.length() - 4));
-        GPA = Double.parseDouble(input.substring(input.length() - 9,
-                input.length() - 6));
         info = input;
     }
 
-    public void setModifiedGradYear(int earliest) {
-        modifiedGradYear = graduationYear - earliest;
+    public void setInfo(String info) {
+        this.info = info;
+        GPA = Math.abs((int) (Double.parseDouble(info.substring(info.length() - 9,
+                info.length() - 5)) * 100) - 500);
+    }
+
+    public void setGPA(int GPA) {
+        this.GPA = GPA;
+    }
+
+    public int getGPA() {
+        return GPA;
     }
 
     @Override
