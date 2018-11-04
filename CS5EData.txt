@@ -1,0 +1,17 @@
+true	0.532
+true	0.093
+true	0.042
+true	0.065
+true	0.093
+true	0.201
+true	0.530
+true	1.783
+true	4.525
+true	4.494
+true	13.128
+true	35.823
+true	41.127
+true	240.522
+true	608.880
+true	1771.225
+true	6324.680
