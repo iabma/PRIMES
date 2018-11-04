@@ -31,7 +31,7 @@ public class CS5NumGen {
             return false;
         }
 
-        for (int i = 2; i < (num < 50 ? num : (int) Math.sqrt(num)); i++) {
+        for (int i = 2; i <= (int) Math.sqrt(num); i++) {
             if (num % i == 0) {
                 return false;
             }
@@ -46,6 +46,7 @@ public class CS5NumGen {
 
         System.out.print("Number of sets: ");
         long numSets = Long.parseLong(in.next());
+        out.println(numSets);
 
         in.close();
 

@@ -1,119 +1,75 @@
-// Java program Miller-Rabin primality test
-import java.io.*;
-import java.math.*;
+// Java program for implementation of Heap Sort
+public class test
+{
+    public void sort(int arr[])
+    {
+        int n = arr.length;
 
-class GFG {
+        // Build heap (rearrange array)
+        for (int i = n / 2 - 1; i >= 0; i--)
+            heapify(arr, n, i);
 
-    // Utility function to do modular
-    // exponentiation. It returns (x^y) % p
-    static int power(int x, int y, int p) {
+        // One by one extract an element from heap
+        for (int i=n-1; i>=0; i--)
+        {
+            // Move current root to end
+            int temp = arr[0];
+            arr[0] = arr[i];
+            arr[i] = temp;
 
-        int res = 1; // Initialize result
-
-        //Update x if it is more than or
-        // equal to p
-        x = x % p;
-
-        while (y > 0) {
-
-            // If y is odd, multiply x with result
-            if ((y & 1) == 1)
-                res = (res * x) % p;
-
-            // y must be even now
-            y = y >> 1; // y = y/2
-            x = (x * x) % p;
+            // call max heapify on the reduced heap
+            heapify(arr, i, 0);
         }
-
-        return res;
     }
 
-    // This function is called for all k trials.
-    // It returns false if n is composite and
-    // returns false if n is probably prime.
-    // d is an odd number such that d*2<sup>r</sup>
-    // = n-1 for some r >= 1
-    static boolean millerTest(int d, int n) {
+    // To heapify a subtree rooted with node i which is
+    // an index in arr[]. n is size of heap
+    void heapify(int arr[], int n, int i)
+    {
+        int largest = i; // Initialize largest as root
+        int l = 2*i + 1; // left = 2*i + 1
+        int r = 2*i + 2; // right = 2*i + 2
 
-        // Pick a random number in [2..n-2]
-        // Corner cases make sure that n > 4
-        int a = 2 + (int)(Math.random() % (n - 4));
+        // If left child is larger than root
+        if (l < n && arr[l] > arr[largest])
+            largest = l;
 
-        // Compute a^d % n
-        int x = power(a, d, n);
+        // If right child is larger than largest so far
+        if (r < n && arr[r] > arr[largest])
+            largest = r;
 
-        if (x == 1 || x == n - 1)
-            return true;
+        // If largest is not root
+        if (largest != i)
+        {
+            int swap = arr[i];
+            arr[i] = arr[largest];
+            arr[largest] = swap;
 
-        // Keep squaring x while one of the
-        // following doesn't happen
-        // (i) d does not reach n-1
-        // (ii) (x^2) % n is not 1
-        // (iii) (x^2) % n is not n-1
-        while (d != n - 1) {
-            x = (x * x) % n;
-            d *= 2;
-
-            if (x == 1)
-                return false;
-            if (x == n - 1)
-                return true;
+            // Recursively heapify the affected sub-tree
+            heapify(arr, n, largest);
         }
-
-        // Return composite
-        return false;
     }
 
-    // It returns false if n is composite
-    // and returns true if n is probably
-    // prime. k is an input parameter that
-    // determines accuracy level. Higher
-    // value of k indicates more accuracy.
-    static boolean isPrime(int n, int k) {
-
-        // Corner cases
-        if (n <= 1 || n == 4)
-            return false;
-        if (n <= 3)
-            return true;
-
-        // Find r such that n = 2^d * r + 1
-        // for some r >= 1
-        int d = n - 1;
-
-        while (d % 2 == 0)
-            d /= 2;
-
-        // Iterate given nber of 'k' times
-        for (int i = 0; i < k; i++)
-            if (!millerTest(d, n))
-                return false;
-
-        return true;
+    /* A utility function to print array of size n */
+    static void printArray(int arr[])
+    {
+        int n = arr.length;
+        for (int i=0; i<n; ++i)
+            System.out.print(arr[i]+" ");
+        System.out.println();
     }
 
     // Driver program
-    public static void main(String args[]) {
+    public static void main(String args[])
+    {
+        int arr[] = {6143612, 1253098, 1235075, 5892, 5743098, 52437890, 23469807,
+                2029348750, 6234611, 1323452, 552166, 12356, 342157};
+        int n = arr.length;
 
-        int k = 4; // Number of iterations
+        test ob = new test();
+        ob.sort(arr);
 
-        System.out.println("All primes smaller than 10000: ");
-        long startTime = System.nanoTime();
-
-        int numPrimes = 0;
-        for (int n = 1; n < 100000000; n++)
-            if (isPrime(n, k)) {
-                numPrimes++;
-                //System.out.print(n + " ");
-            }
-
-
-        long endTime = System.nanoTime();
-        long netTime = endTime - startTime;
-
-        System.out.printf("\nTime elapsed (ms): %.2f\n",
-                (double) netTime / 1000000);
+        System.out.println("Sorted array is");
+        printArray(arr);
     }
 }
-
-/* This code is contributed by Nikita Tiwari.*/
