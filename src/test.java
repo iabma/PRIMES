@@ -1,104 +1,119 @@
-import java.util.Random;
+// Java program Miller-Rabin primality test
+import java.io.*;
+import java.math.*;
 
-public class test
-{
+class GFG {
 
-    static private Random r = new Random();
-    public static void main(String[] args)
-    {
-        try
-        {
-            int[] vals = new int[100000];
-            for ( int i = 0; i < vals.length; i++ )
-            {
-                vals[i] = r.nextInt(1000);
-            }
+    // Utility function to do modular
+    // exponentiation. It returns (x^y) % p
+    static int power(int x, int y, int p) {
 
-            long startTime = System.nanoTime();
-            quickSort( vals, 0, vals.length - 1, false, true );
-            long endTime = System.nanoTime();
-            long netTime = endTime - startTime;
-            System.out.printf("Time elapsed (ms): %.2f\n",
-                    (double) netTime / 1000000);
-            /*for (int i=0; i<1000000; i++) {
-                System.out.println(vals[i]);
-            }*/
+        int res = 1; // Initialize result
 
+        //Update x if it is more than or
+        // equal to p
+        x = x % p;
+
+        while (y > 0) {
+
+            // If y is odd, multiply x with result
+            if ((y & 1) == 1)
+                res = (res * x) % p;
+
+            // y must be even now
+            y = y >> 1; // y = y/2
+            x = (x * x) % p;
         }
-        catch ( Exception e )
-        {
-            e.printStackTrace();
-        }
+
+        return res;
     }
 
+    // This function is called for all k trials.
+    // It returns false if n is composite and
+    // returns false if n is probably prime.
+    // d is an odd number such that d*2<sup>r</sup>
+    // = n-1 for some r >= 1
+    static boolean millerTest(int d, int n) {
 
-    static void swap(int[] array, int left, int right)
-    {
-        int temp = array[left];
-        array[left] = array[right];
-        array[right] = temp;
+        // Pick a random number in [2..n-2]
+        // Corner cases make sure that n > 4
+        int a = 2 + (int)(Math.random() % (n - 4));
+
+        // Compute a^d % n
+        int x = power(a, d, n);
+
+        if (x == 1 || x == n - 1)
+            return true;
+
+        // Keep squaring x while one of the
+        // following doesn't happen
+        // (i) d does not reach n-1
+        // (ii) (x^2) % n is not 1
+        // (iii) (x^2) % n is not n-1
+        while (d != n - 1) {
+            x = (x * x) % n;
+            d *= 2;
+
+            if (x == 1)
+                return false;
+            if (x == n - 1)
+                return true;
+        }
+
+        // Return composite
+        return false;
     }
 
+    // It returns false if n is composite
+    // and returns true if n is probably
+    // prime. k is an input parameter that
+    // determines accuracy level. Higher
+    // value of k indicates more accuracy.
+    static boolean isPrime(int n, int k) {
 
-    static void insertionSort(int[] array, int start, int end)
-    {
-        int j, temp;
-        for ( int i = start; i <= end; i++ )
-        {
-            temp = array[i];
-            j = i;
-            while ( j > 0 && array[j - 1] > temp )
-            {
-                array[j] = array[j - 1];
-                j--;
-            }
-            array[j] = temp;
-        }
+        // Corner cases
+        if (n <= 1 || n == 4)
+            return false;
+        if (n <= 3)
+            return true;
+
+        // Find r such that n = 2^d * r + 1
+        // for some r >= 1
+        int d = n - 1;
+
+        while (d % 2 == 0)
+            d /= 2;
+
+        // Iterate given nber of 'k' times
+        for (int i = 0; i < k; i++)
+            if (!millerTest(d, n))
+                return false;
+
+        return true;
     }
 
+    // Driver program
+    public static void main(String args[]) {
 
-    static void quickSort(int[] array, int first, int last,
-                           boolean randomPivot, boolean insertionSort)
-    {
-        int left = first;
-        int right = last;
-        int pivot;
+        int k = 4; // Number of iterations
 
-        if ( insertionSort )
-        {
-            if ( last - first <= 1000 )
-            {
-                insertionSort( array, first, last );
-                return;
+        System.out.println("All primes smaller than 10000: ");
+        long startTime = System.nanoTime();
+
+        int numPrimes = 0;
+        for (int n = 1; n < 100000000; n++)
+            if (isPrime(n, k)) {
+                numPrimes++;
+                //System.out.print(n + " ");
             }
-        }
 
-        if ( randomPivot )
-        {
-            pivot = array[first + r.nextInt( last - first )];
-        }
-        else
-        {
-            pivot = array[(last + first) / 2];
-        }
 
-        while ( left <= right )
-        {
-            while ( array[left] < pivot )
-                left++;
-            while ( array[right] > pivot )
-                right--;
-            if ( left <= right )
-            {
-                if ( left != right )
-                    swap( array, left, right );
-                left++;
-                right--;
-            }
-        }
-        if ( first < right )
-            quickSort( array, first, right, randomPivot, insertionSort );
-        if ( left < last )
-            quickSort( array, left, last, randomPivot, insertionSort );
+        long endTime = System.nanoTime();
+        long netTime = endTime - startTime;
+
+        System.out.printf("\nTime elapsed (ms): %.2f\n",
+                (double) netTime / 1000000);
     }
 }
+
+/* This code is contributed by Nikita Tiwari.*/
