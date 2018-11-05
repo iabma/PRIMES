@@ -60,6 +60,7 @@ public class CS5NumGen {
                     out.print(findComposite() + " ");
                 }
             }
+            System.out.printf("%.2f%% done.\n", (double) (i + 1) / numSets * 100);
             out.println();
         }
 

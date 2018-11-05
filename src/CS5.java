@@ -41,7 +41,7 @@ public class CS5 {
     private static void index() {
         indexes = new int[numSets];
         newIndexes = new int[numSets];
-        setsAtIndex = new int[numSets];
+        setsAtIndex = new int[5];
         primes = new long[numSets];
         newPrimes = new long[numSets];
         for (int i = 0; i < numSets; i++) {
@@ -52,9 +52,72 @@ public class CS5 {
                     newIndexes[i] = j;
                     primes[i] = data[i][j];
                     newPrimes[i] = data[i][j];
+                    System.out.println(data[i][j] + " : " + j);
                 }
             }
+            System.out.printf("%.2f%%\n", (double) (i + 1) / numSets * 100);
         }
+    }
+
+    private static void heapSort(long[] input, int startIndex) {
+        int length = input.length;
+
+        for (int i = length / 2 - 1; i >= 0; i--)
+            heapify(input, length, i, startIndex);
+
+        for (int i = length - 1; i >= 0; i--) {
+            long[] tempData = data[startIndex];
+            long temp = input[0];
+            long tempPrimes = newPrimes[startIndex];
+            data[startIndex] = data[startIndex + i];
+            input[0] = input[i];
+            newPrimes[startIndex] = newPrimes[startIndex + i];
+            data[startIndex] = tempData;
+            input[i] = temp;
+            newPrimes[startIndex] = tempPrimes;
+
+            heapify(input, i, 0, startIndex);
+        }
+    }
+
+    private static void heapify(long[] input, int n, int i, int startIndex) {
+        int largest = i;
+        int left = 2 * i + 1;
+        int right = 2 * i + 2;
+
+        // If left child is larger than root
+        if (left < n && input[left] > input[largest]) {
+            System.out.println("l");
+            largest = left;
+        }
+
+        // If right child is larger than largest so far
+        if (right < n && input[right] > input[largest]) {
+            System.out.println("r");
+            largest = right;
+        }
+
+        // If largest is not root
+        if (largest != i) {
+            long[] swapData = data[startIndex + i];
+            long swap = input[i];
+            long swapPrimes = newPrimes[startIndex + i];
+            data[startIndex + i] = data[startIndex + largest];
+            input[i] = input[largest];
+            newPrimes[startIndex + i] = newPrimes[startIndex + largest];
+            data[startIndex + largest] = swapData;
+            input[largest] = swap;
+            newPrimes[startIndex + largest] = swapPrimes;
+
+            heapify(input, n, largest, startIndex);
+        }
+    }
+
+    private static boolean isGreater(long[] one, long[] two) {
+        for (int i = 0; i < 5; i++) {
+            if (one[i] > two[i]) return true;
+        }
+        return false;
     }
 
     private static void sortByIndex() {
@@ -78,16 +141,22 @@ public class CS5 {
 
     private static void sortByPrimes() {
         for (int j = 0; j < 5; j++) {
-            for (int i = 0; i < setsAtIndex[j]; i++) {
+            System.out.print(j + " : " + setsAtIndex[j] + " : ");
+            if (setsAtIndex[j] > 0) {
+                long[] primesAtIndex = new long[setsAtIndex[j]];
                 int startIndex = 0;
-                int currentJ = j;
-                while (currentJ > 0) {
-                    currentJ--;
-                    startIndex += setsAtIndex[currentJ];
+                for (int k = 0; k < j; k++) {
+                    startIndex += setsAtIndex[k];
                 }
+                System.out.print(startIndex + " : ");
 
+                heapSort(primesAtIndex, startIndex);
 
+                for (int i = 0; i < setsAtIndex[j]; i++) {
+                    System.out.print(newPrimes[startIndex + i] + " ");
+                }
             }
+            System.out.println();
         }
     }
 
@@ -113,12 +182,17 @@ public class CS5 {
         Scanner inputFile = new Scanner(input);
         read(inputFile);
         inputFile.close();
+        System.out.println("File read. Indexing...");
 
         long startTime = System.nanoTime();
 
         index();
+        System.out.println("Indexed.");
 
         sortByIndex();
+        System.out.println("Sorted by index.");
+
+        sortByPrimes();
 
         long endTime = System.nanoTime();
         long netTime = endTime - startTime;
