@@ -14,15 +14,12 @@ public class CS5 {
     private static int numSets;
     private static PrimeSet[] primeSets;
 
+    // Maybe find a faster one?
     private static boolean isPrime(long num) {
-        if (num == 1) {
-            return false;
-        }
+        if (num == 1) return false;
 
         for (int i = 2; i <= (int) Math.sqrt(num); i++) {
-            if (num % i == 0) {
-                return false;
-            }
+            if (num % i == 0) return false;
         }
 
         return true;
@@ -62,7 +59,9 @@ public class CS5 {
         }
     }
 
-    private static void heapSort(long[] input, int length, int startIndex) {
+    private static void heapSort(boolean single, int length, int startIndex) {
+        long[] input = newPrimes;
+
         for (int i = length / 2 - 1; i >= 0; i--)
             heapify(input, length, i, startIndex);
 
@@ -85,12 +84,12 @@ public class CS5 {
         int right = 2 * i + 2;
 
         // If left child is larger than root
-        if (left < n && input[startIndex + left] > input[startIndex + largest]) {
+        if (left < n && isGreater(input[startIndex + left], input[startIndex + largest])) {
             largest = left;
         }
 
         // If right child is larger than largest so far
-        if (right < n && input[startIndex + right] > input[startIndex + largest]) {
+        if (right < n && isGreater(input[startIndex + right], input[startIndex + largest])) {
             largest = right;
         }
 
@@ -113,6 +112,10 @@ public class CS5 {
             if (one[i] > two[i]) return true;
         }
         return false;
+    }
+
+    private static boolean isGreater(long one, long two) {
+        return one > two;
     }
 
     private static void sortByIndex() {
@@ -144,7 +147,7 @@ public class CS5 {
                 }
                 System.out.print(startIndex + " : ");
 
-                heapSort(newPrimes, setsAtIndex[j], startIndex);
+                heapSort(true, setsAtIndex[j], startIndex);
 
                 for (int i = 0; i < setsAtIndex[j]; i++) {
                     System.out.print(newPrimes[startIndex + i] + " ");

@@ -5,7 +5,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class CS5NumGen {
     private static long Long() {
-        return ThreadLocalRandom.current().nextLong(1, 100000L);
+        return ThreadLocalRandom.current().nextLong(1, 100000000000000000L);
     }
 
     private static long findPrime() {
