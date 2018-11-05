@@ -1,15 +1,18 @@
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CS5 {
     private static long[][] data;
     private static long[][] tempData;
+    private static long[][] equalPrimesAtIndex;
     private static int[] setsAtIndex;
     private static int[] indexes;
     private static int[] newIndexes;
     private static long[] primes;
     private static long[] newPrimes;
     private static int numSets;
+    private static PrimeSet[] primeSets;
 
     private static boolean isPrime(long num) {
         if (num == 1) {
@@ -39,6 +42,7 @@ public class CS5 {
     }
 
     private static void index() {
+        primeSets = new PrimeSet[numSets];
         indexes = new int[numSets];
         newIndexes = new int[numSets];
         setsAtIndex = new int[5];
@@ -52,29 +56,24 @@ public class CS5 {
                     newIndexes[i] = j;
                     primes[i] = data[i][j];
                     newPrimes[i] = data[i][j];
-                    System.out.println(data[i][j] + " : " + j);
                 }
             }
             System.out.printf("%.2f%%\n", (double) (i + 1) / numSets * 100);
         }
     }
 
-    private static void heapSort(long[] input, int startIndex) {
-        int length = input.length;
-
+    private static void heapSort(long[] input, int length, int startIndex) {
         for (int i = length / 2 - 1; i >= 0; i--)
             heapify(input, length, i, startIndex);
 
         for (int i = length - 1; i >= 0; i--) {
+            long tempPrimes = input[startIndex];
+            input[startIndex] = input[startIndex + i];
+            input[startIndex + i] = tempPrimes;
+
             long[] tempData = data[startIndex];
-            long temp = input[0];
-            long tempPrimes = newPrimes[startIndex];
             data[startIndex] = data[startIndex + i];
-            input[0] = input[i];
-            newPrimes[startIndex] = newPrimes[startIndex + i];
-            data[startIndex] = tempData;
-            input[i] = temp;
-            newPrimes[startIndex] = tempPrimes;
+            data[startIndex + i] = tempData;
 
             heapify(input, i, 0, startIndex);
         }
@@ -86,28 +85,24 @@ public class CS5 {
         int right = 2 * i + 2;
 
         // If left child is larger than root
-        if (left < n && input[left] > input[largest]) {
-            System.out.println("l");
+        if (left < n && input[startIndex + left] > input[startIndex + largest]) {
             largest = left;
         }
 
         // If right child is larger than largest so far
-        if (right < n && input[right] > input[largest]) {
-            System.out.println("r");
+        if (right < n && input[startIndex + right] > input[startIndex + largest]) {
             largest = right;
         }
 
         // If largest is not root
         if (largest != i) {
+            long swapPrimes = input[startIndex + i];
+            input[startIndex + i] = input[startIndex + largest];
+            input[startIndex + largest] = swapPrimes;
+
             long[] swapData = data[startIndex + i];
-            long swap = input[i];
-            long swapPrimes = newPrimes[startIndex + i];
             data[startIndex + i] = data[startIndex + largest];
-            input[i] = input[largest];
-            newPrimes[startIndex + i] = newPrimes[startIndex + largest];
             data[startIndex + largest] = swapData;
-            input[largest] = swap;
-            newPrimes[startIndex + largest] = swapPrimes;
 
             heapify(input, n, largest, startIndex);
         }
@@ -143,20 +138,26 @@ public class CS5 {
         for (int j = 0; j < 5; j++) {
             System.out.print(j + " : " + setsAtIndex[j] + " : ");
             if (setsAtIndex[j] > 0) {
-                long[] primesAtIndex = new long[setsAtIndex[j]];
                 int startIndex = 0;
                 for (int k = 0; k < j; k++) {
                     startIndex += setsAtIndex[k];
                 }
                 System.out.print(startIndex + " : ");
 
-                heapSort(primesAtIndex, startIndex);
+                heapSort(newPrimes, setsAtIndex[j], startIndex);
 
                 for (int i = 0; i < setsAtIndex[j]; i++) {
                     System.out.print(newPrimes[startIndex + i] + " ");
+
                 }
             }
             System.out.println();
+        }
+    }
+
+    private static void sortByOther() {
+        for (int i = 0; i < numSets; i++) {
+
         }
     }
 
@@ -165,7 +166,7 @@ public class CS5 {
             for (int j = 0; j < 5; j++) {
                 System.out.print(data[i][j] + " ");
             }
-            System.out.println(newPrimes[i] + " " + (newIndexes[i] + 1));
+            System.out.println(": " + newPrimes[i] + " " + (newIndexes[i] + 1));
         }
     }
 
@@ -190,9 +191,10 @@ public class CS5 {
         System.out.println("Indexed.");
 
         sortByIndex();
-        System.out.println("Sorted by index.");
+        System.out.println("Sorted by prime number index.");
 
         sortByPrimes();
+        System.out.println("Sorted by prime number value");
 
         long endTime = System.nanoTime();
         long netTime = endTime - startTime;
