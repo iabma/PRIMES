@@ -1,5 +1,6 @@
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.math.BigInteger;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -27,17 +28,8 @@ public class CS5NumGen {
     }
 
     private static boolean isPrime(long num) {
-        if (num == 1) {
-            return false;
-        }
-
-        for (int i = 2; i <= (int) Math.sqrt(num); i++) {
-            if (num % i == 0) {
-                return false;
-            }
-        }
-
-        return true;
+        BigInteger numToCheck = BigInteger.valueOf(num);
+        return numToCheck.isProbablePrime(1);
     }
 
     public static void main(String[] args) throws FileNotFoundException {

@@ -1,5 +1,5 @@
 import java.io.File;
-import java.util.ArrayList;
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class CS5 {
@@ -9,20 +9,17 @@ public class CS5 {
     private static int[] setsAtIndex;
     private static int[] indexes;
     private static int[] newIndexes;
+    private static int[] primesNum;
     private static long[] primes;
     private static long[] newPrimes;
-    private static int numSets;
     private static PrimeSet[] primeSets;
+    private static int numSets;
+    private static long numPrimes;
+    private static long highestNum;
 
-    // Maybe find a faster one?
     private static boolean isPrime(long num) {
-        if (num == 1) return false;
-
-        for (int i = 2; i <= (int) Math.sqrt(num); i++) {
-            if (num % i == 0) return false;
-        }
-
-        return true;
+        BigInteger numToCheck = BigInteger.valueOf(num);
+        return numToCheck.isProbablePrime(1);
     }
 
     private static void read(Scanner input) {
@@ -45,8 +42,11 @@ public class CS5 {
         setsAtIndex = new int[5];
         primes = new long[numSets];
         newPrimes = new long[numSets];
+        highestNum = 0;
+
         for (int i = 0; i < numSets; i++) {
             for (int j = 0; j < 5; j++) {
+                if (data[i][j] > highestNum) highestNum = data[i][j];
                 if (isPrime(data[i][j])) {
                     setsAtIndex[j]++;
                     indexes[i] = j;

@@ -1,75 +1,58 @@
-// Java program for implementation of Heap Sort
+/**
+ ** Java Program to Implement Miller Rabin Primality Test Algorithm
+ **/
+
+import java.util.Scanner;
+import java.util.Random;
+import java.math.BigInteger;
+import java.util.concurrent.ThreadLocalRandom;
+
+/** Class MillerRabin **/
 public class test
 {
-    public void sort(long arr[])
-    {
-        int n = arr.length;
+    private static BigInteger num;
+    private static final BigInteger ONE = new BigInteger("1");
+    private static final BigInteger TWO = new BigInteger("2");
 
-        // Build heap (rearrange array)
-        for (int i = n / 2 - 1; i >= 0; i--)
-            heapify(arr, n, i);
+    private static boolean passesMillerRabin(int iterations, Random rnd) {
+        // Find a and m such that m is odd and num == 1 + 2**a * m
+        BigInteger numMinusOne = num.subtract(ONE);
+        BigInteger m = numMinusOne;
+        int a = m.getLowestSetBit();
+        m = m.shiftRight(a);
 
-        // One by one extract an element from heap
-        for (int i=n-1; i>=0; i--)
-        {
-            // Move current root to end
-            long temp = arr[0];
-            arr[0] = arr[i];
-            arr[i] = temp;
-
-            // call max heapify on the reduced heap
-            heapify(arr, i, 0);
+        // Do the tests
+        if (rnd == null) {
+            rnd = ThreadLocalRandom.current();
         }
-    }
+        for (int i=0; i < iterations; i++) {
+            // Generate a uniform random on (1, num)
+            BigInteger b;
+            do {
+                b = new BigInteger(num.bitLength(), rnd);
+            } while (b.compareTo(ONE) <= 0 || b.compareTo(num) >= 0);
 
-    // To heapify a subtree rooted with node i which is
-    // an index in arr[]. n is size of heap
-    void heapify(long arr[], int n, int i)
-    {
-        int largest = i; // Initialize largest as root
-        int l = 2*i + 1; // left = 2*i + 1
-        int r = 2*i + 2; // right = 2*i + 2
-
-        // If left child is larger than root
-        if (l < n && arr[l] > arr[largest])
-            largest = l;
-
-        // If right child is larger than largest so far
-        if (r < n && arr[r] > arr[largest])
-            largest = r;
-
-        // If largest is not root
-        if (largest != i)
-        {
-            long swap = arr[i];
-            arr[i] = arr[largest];
-            arr[largest] = swap;
-
-            // Recursively heapify the affected sub-tree
-            heapify(arr, n, largest);
+            int j = 0;
+            BigInteger z = b.modPow(m, num);
+            while (!((j == 0 && z.equals(ONE)) || z.equals(numMinusOne))) {
+                if (j > 0 && z.equals(ONE) || ++j == a)
+                    return false;
+                z = z.modPow(TWO, num);
+            }
         }
+        return true;
     }
 
-    /* A utility function to print array of size n */
-    static void printArray(long arr[])
-    {
-        int n = arr.length;
-        for (int i=0; i<n; ++i)
-            System.out.print(arr[i]+" ");
-        System.out.println();
-    }
+    public static void main(String[] args) {
+        Random rand = new Random();
+        num = new BigInteger("99999988898898889");
+        boolean bool = false;
 
-    // Driver program
-    public static void main(String args[])
-    {
-        long arr[] = {614313515612L, 1251235153098L, 123506234675L, 17, 5743098, 52437890,
-                23469807, 2029348750, 17, 1323152352452L, 97, 12356, 342157};
-        int n = arr.length;
-
-        test ob = new test();
-        ob.sort(arr);
-
-        System.out.println("Sorted array is");
-        printArray(arr);
+        long startTime = System.nanoTime();
+        bool = num.isProbablePrime(1);
+        long endTime = System.nanoTime();
+        long netTime = endTime - startTime;
+        System.out.println(bool);
+        System.out.println(netTime / 1000000.0);
     }
 }
