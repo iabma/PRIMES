@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class CS5 {
     private static long[][] data;
     private static long[][] tempData;
-    private static long[][] equalPrimesAtIndex;
+    private static long[][] equalPrimes;
     private static int[] setsAtIndex;
     private static int[] indexes;
     private static int[] newIndexes;
@@ -18,14 +18,30 @@ public class CS5 {
     private static long highestNum;
 
     private static boolean isPrime(long num) {
+        if (num < 10000) return smallNumPrimality(num);
         BigInteger numToCheck = BigInteger.valueOf(num);
         return numToCheck.isProbablePrime(1);
+    }
+
+    private static boolean smallNumPrimality(long num) {
+        if (num == 1) {
+            return false;
+        }
+
+        for (int i = 2; i <= (int) Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     private static void read(Scanner input) {
         numSets = Integer.parseInt(input.nextLine());
         data = new long[numSets][5];
         tempData = new long[numSets][5];
+        equalPrimes = new long[numSets][5];
 
         for (int i = 0; i < numSets; i++) {
             for (int j = 0; j < 5; j++) {
@@ -44,18 +60,36 @@ public class CS5 {
         newPrimes = new long[numSets];
         highestNum = 0;
 
+        int index = 0;
+
         for (int i = 0; i < numSets; i++) {
+            boolean primeFound = false;
             for (int j = 0; j < 5; j++) {
                 if (data[i][j] > highestNum) highestNum = data[i][j];
                 if (isPrime(data[i][j])) {
-                    setsAtIndex[j]++;
-                    indexes[i] = j;
-                    newIndexes[i] = j;
-                    primes[i] = data[i][j];
-                    newPrimes[i] = data[i][j];
+                    if (primeFound) {
+                        primeFound = false;
+                        break;
+                    }
+                    index = j;
+                    primeFound = true;
                 }
             }
-            System.out.printf("%.2f%%\n", (double) (i + 1) / numSets * 100);
+            if (!primeFound) {
+                System.out.println("okay");
+                for (int j = 0; j < 5; j++) {
+                    if (smallNumPrimality(data[i][j])) {
+                        System.out.println("great");
+                        index = j;
+                    }
+                }
+            }
+
+            setsAtIndex[index]++;
+            indexes[i] = index;
+            newIndexes[i] = index;
+            primes[i] = data[i][index];
+            newPrimes[i] = data[i][index];
         }
     }
 
@@ -63,59 +97,64 @@ public class CS5 {
         long[] input = newPrimes;
 
         for (int i = length / 2 - 1; i >= 0; i--)
-            heapify(input, length, i, startIndex);
+            heapify(input, length, i, startIndex, single);
 
         for (int i = length - 1; i >= 0; i--) {
-            long tempPrimes = input[startIndex];
-            input[startIndex] = input[startIndex + i];
-            input[startIndex + i] = tempPrimes;
+            if (single) {
+                long tempPrimes = input[startIndex];
+                input[startIndex] = input[startIndex + i];
+                input[startIndex + i] = tempPrimes;
+            }
 
             long[] tempData = data[startIndex];
             data[startIndex] = data[startIndex + i];
             data[startIndex + i] = tempData;
 
-            heapify(input, i, 0, startIndex);
+            heapify(input, i, 0, startIndex, single);
         }
     }
 
-    private static void heapify(long[] input, int n, int i, int startIndex) {
+    private static void heapify(long[] input, int n, int i, int startIndex, boolean single) {
         int largest = i;
         int left = 2 * i + 1;
         int right = 2 * i + 2;
 
         // If left child is larger than root
-        if (left < n && isGreater(input[startIndex + left], input[startIndex + largest])) {
+        if (left < n && isGreater(startIndex + left, startIndex + largest, single)) {
             largest = left;
         }
 
         // If right child is larger than largest so far
-        if (right < n && isGreater(input[startIndex + right], input[startIndex + largest])) {
+        if (right < n && isGreater(startIndex + right, startIndex + largest, single)) {
             largest = right;
         }
 
         // If largest is not root
         if (largest != i) {
-            long swapPrimes = input[startIndex + i];
-            input[startIndex + i] = input[startIndex + largest];
-            input[startIndex + largest] = swapPrimes;
+            if (single) {
+                long swapPrimes = input[startIndex + i];
+                input[startIndex + i] = input[startIndex + largest];
+                input[startIndex + largest] = swapPrimes;
+            }
 
             long[] swapData = data[startIndex + i];
             data[startIndex + i] = data[startIndex + largest];
             data[startIndex + largest] = swapData;
 
-            heapify(input, n, largest, startIndex);
+            heapify(input, n, largest, startIndex, single);
         }
     }
 
-    private static boolean isGreater(long[] one, long[] two) {
-        for (int i = 0; i < 5; i++) {
-            if (one[i] > two[i]) return true;
+    private static boolean isGreater(int one, int two, boolean single) {
+        if (single) {
+            return newPrimes[one] > newPrimes[two];
+        } else {
+            for (int i = 0; i < 5; i++) {
+                if (data[one][i] > data[two][i]) return true;
+                else if (data[one][i] < data[two][i]) return false;
+            }
+            return false;
         }
-        return false;
-    }
-
-    private static boolean isGreater(long one, long two) {
-        return one > two;
     }
 
     private static void sortByIndex() {
@@ -139,28 +178,38 @@ public class CS5 {
 
     private static void sortByPrimes() {
         for (int j = 0; j < 5; j++) {
-            System.out.print(j + " : " + setsAtIndex[j] + " : ");
+            //System.out.print(j + " : " + setsAtIndex[j] + " : ");
             if (setsAtIndex[j] > 0) {
                 int startIndex = 0;
                 for (int k = 0; k < j; k++) {
                     startIndex += setsAtIndex[k];
                 }
-                System.out.print(startIndex + " : ");
+                //System.out.print(startIndex + " : ");
 
                 heapSort(true, setsAtIndex[j], startIndex);
 
                 for (int i = 0; i < setsAtIndex[j]; i++) {
-                    System.out.print(newPrimes[startIndex + i] + " ");
+                    //System.out.print(newPrimes[startIndex + i] + " ");
 
                 }
             }
-            System.out.println();
+            //System.out.println();
         }
     }
 
     private static void sortByOther() {
-        for (int i = 0; i < numSets; i++) {
-
+        for (int j = 0; j <= numSets; j++) {
+            int i = j;
+            int startIndex = -1;
+            while (j < numSets - 1 && newPrimes[j] == newPrimes[j + 1]) {
+                startIndex = i;
+                j++;
+            }
+            if (startIndex != -1) {
+                int length = j - startIndex + 1;
+                //System.out.println(startIndex + " " + length);
+                heapSort(false, length, startIndex);
+            }
         }
     }
 
@@ -197,7 +246,10 @@ public class CS5 {
         System.out.println("Sorted by prime number index.");
 
         sortByPrimes();
-        System.out.println("Sorted by prime number value");
+        System.out.println("Sorted by prime number value.");
+
+        sortByOther();
+        System.out.println("Sorted by other values.");
 
         long endTime = System.nanoTime();
         long netTime = endTime - startTime;
