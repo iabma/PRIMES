@@ -188,10 +188,9 @@ public class CS5 {
 
                 heapSort(true, setsAtIndex[j], startIndex);
 
-                for (int i = 0; i < setsAtIndex[j]; i++) {
-                    //System.out.print(newPrimes[startIndex + i] + " ");
-
-                }
+                /*for (int i = 0; i < setsAtIndex[j]; i++) {
+                    System.out.print(newPrimes[startIndex + i] + " ");
+                }*/
             }
             //System.out.println();
         }

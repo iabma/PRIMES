@@ -52,9 +52,9 @@ public class CS5NumGen {
 
         for (int i = 0; i < numSets; i++) {
             int primeIndex = ThreadLocalRandom.current().nextInt(5);
-            int orderOfMagnitude = ThreadLocalRandom.current().nextInt(1, 18);
 
             for (int j = 0; j < 5; j++) {
+                int orderOfMagnitude = ThreadLocalRandom.current().nextInt(1, 18);
                 if (j == primeIndex) {
                     out.print(findPrime((long) Math.pow(10, orderOfMagnitude)) + " ");
                 } else {
