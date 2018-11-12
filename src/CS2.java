@@ -4,29 +4,20 @@ import java.util.Scanner;
 
 class CS2 {
     private static int numStudents;
-    private static String[] tempStudentIDs;
     private static String[] studentIDs;
     private static int[] gradYears;
-    private static int[] numPerGradYear;
     private static double[] GPAs;
-    private static double[] tempGPAs;
-    private static int[] numPerGPA;
 
     private static String[] read(Scanner input) {
         numStudents = Integer.parseInt(input.nextLine());
         studentIDs = new String[numStudents];
-        tempStudentIDs = new String[numStudents];
         gradYears = new int[numStudents];
-        numPerGradYear = new int[5];
         GPAs = new double[numStudents];
-        tempGPAs = new double[numStudents];
-        numPerGPA = new int[5];
         String[] info = new String[numStudents];
 
         for (int i = 0; i < numStudents; i++) {
             info[i] = input.nextLine();
             studentIDs[i] = info[i];
-            tempStudentIDs[i] = info[i];
         }
 
         return info;
@@ -37,87 +28,76 @@ class CS2 {
             gradYears[i] = Integer.parseInt(info[i].substring(info[i].length() - 4)) - 2018;
             GPAs[i] = Double.parseDouble(info[i].substring(info[i].length() - 9,
                     info[i].length() - 5));
-            tempGPAs[i] = GPAs[i];
         }
     }
 
-    private static void heapSort(int length, int startIndex) {;
-        for (int i = length / 2 - 1; i >= 0; i--)
-            heapify(length, i, startIndex);
+    private static boolean isGreater(int one, int two) {
+        if (gradYears[one] > gradYears[two]) {
+            //System.out.println("lesser grad year");
+            return true;
+        }
+        if (gradYears[one] == gradYears[two] && GPAs[one] > GPAs[two]) {
+            //System.out.println("greater gpa same grad year");
+            return true;
+        }
+        //System.out.println("Greater grad/gpa");
+        return false;
+    }
 
-        for (int i = length - 1; i >= 0; i--) {
-                double temp = GPAs[startIndex];
-                GPAs[startIndex] = GPAs[startIndex + i];
-                GPAs[startIndex + i] = temp;
+    private static void heapSort() {
+        for (int i = numStudents / 2 - 1; i >= 0; i--)
+            heapify(numStudents, i);
 
-            String tempData = studentIDs[startIndex];
-            studentIDs[startIndex] = studentIDs[startIndex + i];
-            studentIDs[startIndex + i] = tempData;
+        for (int i = numStudents - 1; i >= 0; i--) {
+            String tempData = studentIDs[0];
+            studentIDs[0] = studentIDs[i];
+            studentIDs[i] = tempData;
 
-            heapify(i, 0, startIndex);
+            int tempGrad = gradYears[0];
+            gradYears[0] = gradYears[i];
+            gradYears[i] = tempGrad;
+
+            double tempGPA = GPAs[0];
+            GPAs[0] = GPAs[i];
+            GPAs[i] = tempGPA;
+
+            heapify(i, 0);
+            for (int j = 0; j < numStudents; j++) {
+
+            }
         }
     }
 
-    private static void heapify(int n, int i, int startIndex) {
+    private static void heapify(int n, int i) {
         int largest = i;
         int left = 2 * i + 1;
         int right = 2 * i + 2;
 
         // If left child is larger than root
-        if (left < n && GPAs[startIndex + left] > GPAs[startIndex + largest]) {
+        if (left < n && isGreater(left, largest)) {
             largest = left;
         }
 
         // If right child is larger than largest so far
-        if (right < n && GPAs[startIndex + right] > GPAs[startIndex + largest]) {
+        if (right < n && isGreater(right, largest)) {
             largest = right;
         }
 
         // If largest is not root
         if (largest != i) {
-                double swap = GPAs[startIndex + i];
-                GPAs[startIndex + i] = GPAs[startIndex + largest];
-                GPAs[startIndex + largest] = swap;
+            String swapData = studentIDs[i];
+            studentIDs[i] = studentIDs[largest];
+            studentIDs[largest] = swapData;
 
-            String swapData = studentIDs[startIndex + i];
-            studentIDs[startIndex + i] = studentIDs[startIndex + largest];
-            studentIDs[startIndex + largest] = swapData;
+            int tempGrad = gradYears[i];
+            gradYears[i] = gradYears[largest];
+            gradYears[largest] = tempGrad;
 
-            heapify(n, largest, startIndex);
-        }
-    }
+            double tempGPA = GPAs[i];
+            GPAs[i] = GPAs[largest];
+            GPAs[largest] = tempGPA;
 
-
-    private static void sortGradYears() {
-        int[] countArray = new int[5];
-
-        for (int i = 0; i < numStudents; i++) {
-            countArray[gradYears[i]]++;
-        }
-
-        for (int i = 0; i < 5; i++) {
-            numPerGradYear[i] = countArray[i];
-            if (i > 0) countArray[i] += countArray[i - 1];
-            System.out.println(numPerGradYear[i]);
-        }
-
-        for (int i = numStudents - 1; i >= 0; i--) {
-            studentIDs[countArray[gradYears[i]] - 1] = tempStudentIDs[i];
-            GPAs[countArray[gradYears[i]] - 1] = tempGPAs[i];
-            countArray[gradYears[i]]--;
-        }
-    }
-
-    private static void sortGPAs() {
-        for (int i = 0; i < 5; i++) {
-            if (numPerGradYear[i] > 0) {
-                int startIndex = 0;
-                for (int j = 0; j < i; j++) {
-                    startIndex += numPerGradYear[j];
-                }
-
-                heapSort(numPerGradYear[i], startIndex);
-            }
+            heapify(n, largest);
         }
     }
 
@@ -151,9 +131,7 @@ class CS2 {
 
         parse(info);
 
-        sortGradYears();
-
-       // sortGPAs();
+        heapSort();
 
         long endTime = System.nanoTime();
         long netTime = endTime - startTime;

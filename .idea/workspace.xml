@@ -1,160 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13b16084-4934-41a7-bff5-401e2dbeace3" name="Default Changelist" comment="">
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NumSets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/NumSets.txt" afterDir="false" />
+    <list default="true" id="c3e6d65f-589f-4ec5-8c27-36cde2505cd8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PRIMES/CS2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PRIMES/CS2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PRIMES/CS5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PRIMES/CS5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PRIMES/CS5NumGen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PRIMES/CS5NumGen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PRIMES/Student.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CS2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CS2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CS5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CS5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CS5NumGen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CS5NumGen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Student.java" beforeDir="false" />
-=======
-      <change afterPath="$PROJECT_DIR$/src/primeDeterminationTesting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS5EData.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS5EDataN.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS5NonEData.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS5NonEDataN.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CS5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CS5.java" afterDir="false" />
->>>>>>> CS5Data
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="-1791613626">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="6" />
-          <entry key="txt" value="5" />
-          <entry key="xml" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="6" />
-          <entry key="PLAIN_TEXT" value="5" />
-          <entry key="XML" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="3678" />
-          <entry key="txt" value="93" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="3678" />
-          <entry key="PLAIN_TEXT" value="93" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.vcs.git.usages" />
-    </session>
     <session id="-1136409231">
-      <usages-collector id="statistics.lifecycle.project">
+      <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="project.closed" value="5" />
-          <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.15" value="1" />
-          <entry key="project.open.time.17" value="1" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.31" value="1" />
-          <entry key="project.opened" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.vcs.git.usages" />
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="CS5NonEData" value="1" />
-          <entry key="iml" value="1" />
-<<<<<<< HEAD
-          <entry key="java" value="19" />
-          <entry key="txt" value="12" />
-          <entry key="xml" value="1" />
-=======
-          <entry key="java" value="9" />
-          <entry key="txt" value="33" />
-          <entry key="xml" value="2" />
->>>>>>> CS5Data
+          <entry key="java" value="372" />
+          <entry key="xml" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-<<<<<<< HEAD
-          <entry key="JAVA" value="10785" />
-          <entry key="PLAIN_TEXT" value="254" />
-=======
-          <entry key="JAVA" value="5337" />
-          <entry key="PLAIN_TEXT" value="135" />
->>>>>>> CS5Data
+          <entry key="JAVA" value="372" />
+          <entry key="XML" value="8" />
         </counts>
       </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
+      <usages-collector id="statistics.file.extensions.open">
         <counts>
-<<<<<<< HEAD
-          <entry key="java" value="10785" />
-          <entry key="txt" value="254" />
-=======
-          <entry key="java" value="5337" />
-          <entry key="txt" value="135" />
->>>>>>> CS5Data
+          <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="IDEA_MODULE" value="1" />
-<<<<<<< HEAD
-          <entry key="JAVA" value="19" />
-          <entry key="PLAIN_TEXT" value="13" />
           <entry key="XML" value="1" />
-=======
-          <entry key="JAVA" value="9" />
-          <entry key="PLAIN_TEXT" value="34" />
-          <entry key="XML" value="2" />
->>>>>>> CS5Data
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/CS5.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="184" column="49" selection-start-line="184" selection-start-column="49" selection-end-line="184" selection-end-column="49" />
-=======
-        <entry file="file://$PROJECT_DIR$/src/primeDeterminationTesting.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="85" column="37" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
->>>>>>> CS5Data
+            <state relative-caret-position="25">
+              <caret line="116" selection-start-line="116" selection-end-line="116" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#isPrime#0;class#CS5#0" />
                 <element signature="method#smallNumPrimality#0;class#CS5#0" />
                 <element signature="method#read#0;class#CS5#0" />
-                <element signature="method#heapSort#0;class#CS5#0" />
-                <element signature="method#heapify#0;class#CS5#0" />
                 <element signature="method#isGreater#0;class#CS5#0" />
                 <element signature="method#sortByOther#0;class#CS5#0" />
                 <element signature="method#write#0;class#CS5#0" />
@@ -163,12 +59,11 @@
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CS2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="155" column="9" selection-start-line="155" selection-start-column="9" selection-end-line="155" selection-end-column="9" />
+            <state relative-caret-position="464">
+              <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -178,43 +73,19 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Output.txt">
-=======
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CS5SmallPrimes.txt">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CS5SmallComp.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FirstNames.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CS5LargeComp.txt">
->>>>>>> CS5Data
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/Input.txt">
-=======
-        <entry file="file://$PROJECT_DIR$/CS5LargePrimes.txt">
->>>>>>> CS5Data
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/Gen.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+            <state relative-caret-position="112">
+              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -249,52 +120,18 @@
               </folding>
             </state>
           </provider>
-=======
-        <entry file="file://$PROJECT_DIR$/CS5!LargePrimes.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CS5!LargeComp.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CS5!SmallPrimes.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CS5!SmallComp.txt">
-          <provider selected="true" editor-type-id="text-editor" />
->>>>>>> CS5Data
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="package-info" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-<<<<<<< HEAD
-      <find>gfg`</find>
-      <find>this</find>
-      <find>14923274939056753</find>
+      <find>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</find>
       <find>input</find>
     </findStrings>
     <replaceStrings>
-      <replace>num</replace>
+      <replace />
     </replaceStrings>
-=======
-      <find>Application</find>
-    </findStrings>
->>>>>>> CS5Data
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -302,36 +139,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/AutoGenStudentDatabase.txt" />
-        <option value="$PROJECT_DIR$/src/StudentGen.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/test.java" />
-        <option value="$PROJECT_DIR$/src/Problem1.java" />
-        <option value="$PROJECT_DIR$/src/G1AnswerCheck.java" />
-        <option value="$PROJECT_DIR$/src/PerfectPower.java" />
-        <option value="$PROJECT_DIR$/src/G6ProceduralSolution.java" />
-        <option value="$PROJECT_DIR$/src/G3AnswerCheck.java" />
-        <option value="$PROJECT_DIR$/src/Problem2.java" />
-        <option value="$PROJECT_DIR$/src/CS1.java" />
-        <option value="$PROJECT_DIR$/src/Student.java" />
-        <option value="$PROJECT_DIR$/src/NumSet.java" />
-        <option value="$PROJECT_DIR$/src/test.java" />
-        <option value="$PROJECT_DIR$/src/PrimeSet.java" />
-        <option value="$PROJECT_DIR$/NumSets.txt" />
-        <option value="$PROJECT_DIR$/src/CS5NumGen.java" />
         <option value="$PROJECT_DIR$/src/CS5.java" />
-<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/CS2.java" />
-=======
-        <option value="$PROJECT_DIR$/CS5!SieveLargePrimes.txt" />
-        <option value="$PROJECT_DIR$/src/primeDeterminationTesting.java" />
->>>>>>> CS5Data
       </list>
     </option>
-  </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -339,12 +151,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-<<<<<<< HEAD
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="Scope" />
-=======
->>>>>>> CS5Data
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -360,46 +169,17 @@
             <path>
               <item name="PRIMES" type="b2602c69:ProjectViewProjectNode" />
               <item name="PRIMES" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PRIMES" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PRIMES" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PRIMES" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PRIMES" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="PRIMES" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PRIMES" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PRIMES" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-<<<<<<< HEAD
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542054539207" />
-=======
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-    </panes>
-  </component>
-  <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541531426601" />
->>>>>>> CS5Data
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542056626770" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -413,12 +193,7 @@
       </list>
     </option>
   </component>
-<<<<<<< HEAD
-  <component name="RunManager" selected="Application.CS2">
-    <configuration name="CS2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CS2" />
-=======
-  <component name="RunManager" selected="Application.ched">
+  <component name="RunManager">
     <configuration name="CS2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CS2" />
       <module name="PRIMES" />
@@ -426,90 +201,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CS5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CS5" />
->>>>>>> CS5Data
-      <module name="PRIMES" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="G6ProceduralSolution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="G6ProceduralSolution" />
-      <module name="PRIMES" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-<<<<<<< HEAD
-    <configuration name="CS5NumGen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CS5NumGen" />
-=======
-    <configuration name="Problem2" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Problem2" />
->>>>>>> CS5Data
-      <module name="PRIMES" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-<<<<<<< HEAD
-    <configuration name="GFG" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GFG" />
-=======
-    <configuration name="ched" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ched" />
->>>>>>> CS5Data
-      <module name="PRIMES" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="primeDeterminationTesting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="primeDeterminationTesting" />
-      <module name="PRIMES" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test" />
-      <module name="PRIMES" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.Problem2" />
-<<<<<<< HEAD
-      <item itemvalue="Application.CS5" />
-      <item itemvalue="Application.GFG" />
-      <item itemvalue="Application.CS5NumGen" />
-      <item itemvalue="Application.test" />
-      <item itemvalue="Application.CS2" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.CS2" />
-        <item itemvalue="Application.CS5" />
-        <item itemvalue="Application.CS5NumGen" />
-        <item itemvalue="Application.test" />
-        <item itemvalue="Application.GFG" />
-=======
-      <item itemvalue="Application.G6ProceduralSolution" />
-      <item itemvalue="Application.CS2" />
-      <item itemvalue="Application.CS5" />
-      <item itemvalue="Application.primeDeterminationTesting" />
-      <item itemvalue="Application.ched" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.ched" />
-        <item itemvalue="Application.primeDeterminationTesting" />
-        <item itemvalue="Application.CS5" />
-        <item itemvalue="Application.G6ProceduralSolution" />
-        <item itemvalue="Application.CS2" />
->>>>>>> CS5Data
       </list>
     </recent_temporary>
   </component>
@@ -552,27 +246,13 @@
       <option name="project" value="LOCAL" />
       <updated>1540670432335</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13731825" />
-=======
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13085622" />
->>>>>>> CS5Data
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -600,32 +280,6 @@
       <window_info anchor="right" id="Maven Projects" order="7" />
     </layout>
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -638,6 +292,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="Created a answer checker for G3." />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/AutoGenStudentDatabase.txt" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -650,30 +305,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="18" selection-start-column="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="50" lean-forward="true" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StudentGen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-277">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
->>>>>>> CS5Data
         </state>
       </provider>
     </entry>
@@ -759,7 +390,6 @@
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/out/production/PRIMES/CS5.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -775,10 +405,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PrimeSet.java">
-=======
-    <entry file="file://$PROJECT_DIR$/CS5NonEData" />
-    <entry file="file://$PROJECT_DIR$/CS5NonEData.txt">
->>>>>>> CS5Data
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
@@ -807,85 +433,29 @@
     <entry file="file://$PROJECT_DIR$/Input.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gen.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CS5NonSieve.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CS5Sieve.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CS5SieveLargeNums.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CS5N!SieveLargeNums.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CS5N!SieveLargePrimes.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CS5NSieveLargeComps.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CS5NSieveLargePrimes.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CS5N!SieveLargeComps.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ched.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="919">
-          <caret line="286" column="52" selection-start-line="286" selection-start-column="52" selection-end-line="286" selection-end-column="52" />
+        <state relative-caret-position="10432">
+          <caret line="652" column="46" selection-start-line="652" selection-start-column="46" selection-end-line="652" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CS5SieveSmallPrimes.txt">
+    <entry file="file://$PROJECT_DIR$/Gen.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="8" />
+        <state relative-caret-position="112">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CS5SieveSmallPrime.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CS5.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="461">
-          <caret line="184" column="49" selection-start-line="184" selection-start-column="49" selection-end-line="184" selection-end-column="49" />
+        <state relative-caret-position="25">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#isPrime#0;class#CS5#0" />
             <element signature="method#smallNumPrimality#0;class#CS5#0" />
             <element signature="method#read#0;class#CS5#0" />
-            <element signature="method#heapSort#0;class#CS5#0" />
-            <element signature="method#heapify#0;class#CS5#0" />
             <element signature="method#isGreater#0;class#CS5#0" />
             <element signature="method#sortByOther#0;class#CS5#0" />
             <element signature="method#write#0;class#CS5#0" />
@@ -898,89 +468,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CS2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="155" column="9" selection-start-line="155" selection-start-column="9" selection-end-line="155" selection-end-column="9" />
-=======
-        <state relative-caret-position="156">
-          <caret line="58" column="61" selection-start-line="58" selection-start-column="61" selection-end-line="58" selection-end-column="61" />
->>>>>>> CS5Data
+        <state relative-caret-position="464">
+          <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CS5SieveSmallComp.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CS5!SieveLargePrimes.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" selection-start-column="15" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CS5SieveLargePrimes.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CS5!SieveLargeComp.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CS5SieveLargeComp.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FirstNames.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/primeDeterminationTesting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="85" column="37" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CS5!SmallComp.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CS5SmallComp.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CS5!SmallPrimes.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CS5SmallPrimes.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CS5!LargePrimes.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CS5LargePrimes.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CS5!LargeComp.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CS5LargeComp.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
