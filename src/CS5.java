@@ -222,6 +222,7 @@ public class CS5 {
     }
 
     public static void main(String[] args) throws Exception {
+<<<<<<< HEAD
         Scanner in = new Scanner(System.in);
 
         //System.out.print("Input file name: ");
@@ -257,5 +258,24 @@ public class CS5 {
 
         System.out.printf("Time elapsed (ms): %.2f\n",
                 (double) netTime / 1000000);
+=======
+        PrintWriter out = new PrintWriter(new File("CS5EDataN.txt"));
+        long[] primeAtLength = {7, 97, 997, 653, 659, 661, 641, 9973, 99929, 999983, 9999991,
+                99999989};
+        long[] nonPrimeAtLength = {8, 99, 999, 9999, 99999, 999999, 9999999, 99999999, 999999999,
+                9999999999L, 99999999999L, 999999999999L, 9999999999999L, 99999999999999L,
+                999999999999999L, 9999999999999999L, 99999999999999999L};
+        for (long i: nonPrimeAtLength) {
+            long startTime = System.nanoTime();
+
+            boolean prime = isPrime(i);
+
+            long endTime = System.nanoTime();
+            long netTime = endTime - startTime;
+
+            out.printf("%b\t%.3f\n", prime, (double) netTime / 1000000);
+        }
+        out.close();
+>>>>>>> CS5Data
     }
 }

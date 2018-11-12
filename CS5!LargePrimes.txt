@@ -1,0 +1,9 @@
+true	3681.268
+true	3166.968
+true	2901.840
+true	3536.171
+true	3305.596
+true	3318.098
+true	3561.254
+true	3348.194
+Total: 26.81939 seconds
