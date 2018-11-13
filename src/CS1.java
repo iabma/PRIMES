@@ -22,17 +22,12 @@ class CS1 {
         return info;
     }
 
-    private static void parse(String[] input) {
-        for (int i = 0; i < numStudents; i++) {
-            gradYears[i] = Integer.parseInt(input[i].substring(input[i].length() - 4));
-        }
-    }
-
-    private static void sort() {
+    private static void sort(String[] input) {
         int[] countArray = new int[5];
         orderedStudentIDs = new String[numStudents];
 
         for (int i = 0; i < numStudents; i++) {
+            gradYears[i] = Integer.parseInt(input[i].substring(input[i].length() - 4));
             countArray[gradYears[i] - 2018]++;
         }
 
@@ -72,9 +67,7 @@ class CS1 {
 
         long startTime = System.nanoTime();
 
-        parse(readInput);
-
-        sort();
+        sort(readInput);
 
         long endTime = System.nanoTime();
         long netTime = endTime - startTime;
