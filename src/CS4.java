@@ -92,7 +92,7 @@ public class CS4 {
         Scanner input = new Scanner(new File("CS4Gen.txt"));
 
         read(input);
-        
+
         input.close();
 
         long startTime = System.nanoTime();
