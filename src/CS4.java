@@ -52,7 +52,7 @@ public class CS4 {
                 Integer.parseInt(mostFrequentTwo.substring(1))) {
             if (isBefore(mostFrequentOne.charAt(0), mostFrequentTwo.charAt(0))) {
                 return true;
-            } else if(mostFrequentOne.charAt(0) == mostFrequentTwo.charAt(0)) {
+            } else if (mostFrequentOne.charAt(0) == mostFrequentTwo.charAt(0)) {
                 if (strings[one].compareTo(strings[two]) < 0) {
                     return true;
                 }
@@ -82,10 +82,11 @@ public class CS4 {
         int highestIndex = 0;
 
         for (int i = 1; i < count.length; i++) {
-            if (count[i] > count[highestIndex] || count[i] == count[highestIndex] && i < highestIndex) highestIndex = i;
+            if (count[i] > count[highestIndex] || count[i] == count[highestIndex] && i < highestIndex)
+                highestIndex = i;
         }
 
-        return (char)(highestIndex + 65) + "" + count[highestIndex];
+        return (char) (highestIndex + 65) + "" + count[highestIndex];
     }
 
     public static void main(String[] args) throws Exception { //MAKE SURE YOU UNTHROW THAT SHIT

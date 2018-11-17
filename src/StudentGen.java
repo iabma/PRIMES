@@ -40,7 +40,7 @@ public class StudentGen {
                     firstNames[rand.nextInt(19948)],
                     rand.nextDouble() * 5,
                     rand.nextInt(5) + 2018);
-           // out.println(rand.nextInt(5));
+            // out.println(rand.nextInt(5));
         }
 
         out.close();

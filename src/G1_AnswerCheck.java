@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class G1AnswerCheck {
+public class G1_AnswerCheck {
     private static final int NUM_ITERATIONS = 10000000;
     private static final int PAIR_AMT = 2;
 
@@ -15,12 +15,12 @@ public class G1AnswerCheck {
             for (int j = 0; j < 10; j++) {
                 int val = gen.nextInt(2);
                 set[j] = val;
-                if (j > 0 && set[j] == set[j-1]) numPairs++;
+                if (j > 0 && set[j] == set[j - 1]) numPairs++;
                 amtReached = numPairs == PAIR_AMT;
             }
             if (amtReached) numSuccesses++;
         }
 
-        System.out.printf("%.3f%%" ,numSuccesses / (double) NUM_ITERATIONS * 100.0);
+        System.out.printf("%.3f%%", numSuccesses / (double) NUM_ITERATIONS * 100.0);
     }
 }

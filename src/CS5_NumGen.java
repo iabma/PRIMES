@@ -3,7 +3,7 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class CS5NumGen {
+public class CS5_NumGen {
     private static long Long(long bound) {
         return ThreadLocalRandom.current().nextLong(1, bound);
     }

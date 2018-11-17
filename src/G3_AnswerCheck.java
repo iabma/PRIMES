@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class G3AnswerCheck {
+public class G3_AnswerCheck {
     private static final long NUM_ITERATIONS = 10000l;
 
     private static void checkA() {
@@ -25,7 +25,7 @@ public class G3AnswerCheck {
             System.out.println(numMoves + " moves");
         }
 
-        System.out.printf("%.5f minutes" , netTime / (double) NUM_ITERATIONS);
+        System.out.printf("%.5f minutes", netTime / (double) NUM_ITERATIONS);
     }
 
     private static void checkB() {
@@ -50,7 +50,7 @@ public class G3AnswerCheck {
             System.out.println(numMoves + " moves");
         }
 
-        System.out.printf("%.5f minutes" , netTime / (double) NUM_ITERATIONS);
+        System.out.printf("%.5f minutes", netTime / (double) NUM_ITERATIONS);
     }
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-public class G6ProceduralSolution {
+public class G6_ProceduralSolution {
     public static int[] genPerfectPowers(int extent, int powerLim) {
         int[] holder = new int[extent * powerLim];
         for (int i = 2; i <= powerLim; i++) {

@@ -10,12 +10,12 @@ public class PrimeSet {
         index = new int[size];
     }
 
-    public void setPrime(long prime) {
-        this.prime = prime;
-    }
-
     public long getPrime() {
         return prime;
+    }
+
+    public void setPrime(long prime) {
+        this.prime = prime;
     }
 
     public void add(int i, int index) {

@@ -10,7 +10,6 @@ class CS2 {
     private static int[] numPerGradYear;
     private static double[] GPAs;
     private static double[] tempGPAs;
-    private static int[] numPerGPA;
 
     private static String[] read(Scanner input) {
         numStudents = Integer.parseInt(input.nextLine());
@@ -20,7 +19,6 @@ class CS2 {
         numPerGradYear = new int[5];
         GPAs = new double[numStudents];
         tempGPAs = new double[numStudents];
-        numPerGPA = new int[5];
         String[] info = new String[numStudents];
 
         for (int i = 0; i < numStudents; i++) {
@@ -32,7 +30,8 @@ class CS2 {
         return info;
     }
 
-    private static void heapSort(int length, int startIndex) {;
+    private static void heapSort(int length, int startIndex) {
+        ;
         for (int i = length / 2 - 1; i >= 0; i--)
             heapify(length, i, startIndex);
 
