@@ -1,58 +1,67 @@
-/**
- ** Java Program to Implement Miller Rabin Primality Test Algorithm
- **/
+// Radix sort Java implementation
+import java.io.*;
+import java.util.*;
 
-import java.util.Scanner;
-import java.util.Random;
-import java.math.BigInteger;
-import java.util.concurrent.ThreadLocalRandom;
+class test {
+    // A function to do counting sort of arr[] according to
+    // the digit represented by exp.
+    static void countSort(int arr[], int n, int exp)
+    {
+        int output[] = new int[n]; // output array
+        int i;
+        int count[] = new int[10];
+        Arrays.fill(count,0);
 
-/** Class MillerRabin **/
-public class test
-{
-    private static BigInteger num;
-    private static final BigInteger ONE = new BigInteger("1");
-    private static final BigInteger TWO = new BigInteger("2");
+        // Store count of occurrences in count[]
+        for (i = 0; i < n; i++)
+            count[ (arr[i]/exp)%10 ]++;
 
-    private static boolean passesMillerRabin(int iterations, Random rnd) {
-        // Find a and m such that m is odd and num == 1 + 2**a * m
-        BigInteger numMinusOne = num.subtract(ONE);
-        BigInteger m = numMinusOne;
-        int a = m.getLowestSetBit();
-        m = m.shiftRight(a);
+        // Change count[i] so that count[i] now contains
+        // actual position of this digit in output[]
+        for (i = 1; i < 10; i++)
+            count[i] += count[i - 1];
 
-        // Do the tests
-        if (rnd == null) {
-            rnd = ThreadLocalRandom.current();
+        // Build the output array
+        for (i = n - 1; i >= 0; i--)
+        {
+            output[count[ (arr[i]/exp)%10 ] - 1] = arr[i];
+            count[ (arr[i]/exp)%10 ]--;
         }
-        for (int i=0; i < iterations; i++) {
-            // Generate a uniform random on (1, num)
-            BigInteger b;
-            do {
-                b = new BigInteger(num.bitLength(), rnd);
-            } while (b.compareTo(ONE) <= 0 || b.compareTo(num) >= 0);
 
-            int j = 0;
-            BigInteger z = b.modPow(m, num);
-            while (!((j == 0 && z.equals(ONE)) || z.equals(numMinusOne))) {
-                if (j > 0 && z.equals(ONE) || ++j == a)
-                    return false;
-                z = z.modPow(TWO, num);
-            }
-        }
-        return true;
+        // Copy the output array to arr[], so that arr[] now
+        // contains sorted numbers according to curent digit
+        for (i = 0; i < n; i++)
+            arr[i] = output[i];
     }
 
-    public static void main(String[] args) {
-        Random rand = new Random();
-        num = new BigInteger("99999988898898889");
-        boolean bool = false;
+    // The main function to that sorts arr[] of size n using
+    // Radix Sort
+    static void radixsort(int arr[], int n) {
 
-        long startTime = System.nanoTime();
-        bool = num.isProbablePrime(1);
-        long endTime = System.nanoTime();
-        long netTime = endTime - startTime;
-        System.out.println(bool);
-        System.out.println(netTime / 1000000.0);
+        // Do counting sort for every digit. Note that instead
+        // of passing digit number, exp is passed. exp is 10^i
+        // where i is current digit number
+        for (int exp = 1; 1000000000/exp >= 1; exp *= 1000) {
+            countSort(arr, n, exp);
+            System.out.println(exp);
+        }
+    }
+
+    // A utility function to print an array
+    static void print(int arr[], int n)
+    {
+        for (int i=0; i<n; i++)
+            System.out.print(arr[i]+" ");
+    }
+
+
+    /*Driver function to check for above function*/
+    public static void main (String[] args)
+    {
+        int arr[] = {345678916, 342368905, 467231450, 398765468, 602345671};
+        int n = arr.length;
+        radixsort(arr, n);
+        print(arr, n);
     }
 }
+/* This code is contributed by Devesh Agrawal */

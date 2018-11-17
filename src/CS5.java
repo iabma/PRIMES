@@ -5,22 +5,17 @@ import java.util.Scanner;
 public class CS5 {
     private static long[][] data;
     private static long[][] tempData;
-    private static long[][] equalPrimes;
     private static int[] setsAtIndex;
     private static int[] indexes;
     private static int[] newIndexes;
-    private static int[] primesNum;
     private static long[] primes;
     private static long[] newPrimes;
-    private static PrimeSet[] primeSets;
     private static int numSets;
-    private static long numPrimes;
-    private static long highestNum;
 
     private static boolean isPrime(long num) {
         if (num < 10000) return smallNumPrimality(num);
         BigInteger numToCheck = BigInteger.valueOf(num);
-        return numToCheck.isProbablePrime(1);
+        return numToCheck.isProbablePrime(5);
     }
 
     private static boolean smallNumPrimality(long num) {
@@ -37,11 +32,22 @@ public class CS5 {
         return true;
     }
 
+    private static boolean isGreater(int one, int two, boolean single) {
+        if (single) {
+            return newPrimes[one] > newPrimes[two];
+        } else {
+            for (int i = 0; i < 5; i++) {
+                if (data[one][i] > data[two][i]) return true;
+                else if (data[one][i] < data[two][i]) return false;
+            }
+            return false;
+        }
+    }
+
     private static void read(Scanner input) {
         numSets = Integer.parseInt(input.nextLine());
         data = new long[numSets][5];
         tempData = new long[numSets][5];
-        equalPrimes = new long[numSets][5];
 
         for (int i = 0; i < numSets; i++) {
             for (int j = 0; j < 5; j++) {
@@ -52,20 +58,17 @@ public class CS5 {
     }
 
     private static void index() {
-        primeSets = new PrimeSet[numSets];
         indexes = new int[numSets];
         newIndexes = new int[numSets];
         setsAtIndex = new int[5];
         primes = new long[numSets];
         newPrimes = new long[numSets];
-        highestNum = 0;
 
         int index = 0;
 
         for (int i = 0; i < numSets; i++) {
             boolean primeFound = false;
             for (int j = 0; j < 5; j++) {
-                if (data[i][j] > highestNum) highestNum = data[i][j];
                 if (isPrime(data[i][j])) {
                     if (primeFound) {
                         primeFound = false;
@@ -142,18 +145,6 @@ public class CS5 {
             data[startIndex + largest] = swapData;
 
             heapify(input, n, largest, startIndex, single);
-        }
-    }
-
-    private static boolean isGreater(int one, int two, boolean single) {
-        if (single) {
-            return newPrimes[one] > newPrimes[two];
-        } else {
-            for (int i = 0; i < 5; i++) {
-                if (data[one][i] > data[two][i]) return true;
-                else if (data[one][i] < data[two][i]) return false;
-            }
-            return false;
         }
     }
 
