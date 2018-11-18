@@ -9,11 +9,12 @@ class CS1 {
     private static int[] gradYears;
 
     private static String[] read(Scanner input) {
-        numStudents = Integer.parseInt(input.nextLine());
+        numStudents = input.nextInt();
         studentIDs = new String[numStudents];
         gradYears = new int[numStudents];
         String[] info = new String[numStudents];
 
+        input.nextLine();
         for (int i = 0; i < numStudents; i++) {
             info[i] = input.nextLine();
             studentIDs[i] = info[i];
