@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  17 NOV 2018 22:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  17 NOV 2018 23:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -514,26 +514,26 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 29.
+LaTeX Font Info:    Try loading font information for U+msa on input line 30.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 29.
+LaTeX Font Info:    Try loading font information for U+msb on input line 30.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-
+ [4]
 (./balaguera-solutions.aux) ) 
 Here is how much of TeX's memory you used:
- 12368 strings out of 492649
- 245786 string characters out of 6129622
+ 12370 strings out of 492649
+ 245807 string characters out of 6129622
  289445 words of memory out of 5000000
- 16013 multiletter control sequences out of 15000+600000
- 5647 words of font info for 23 fonts, out of 8000000 for 9000
+ 16014 multiletter control sequences out of 15000+600000
+ 5993 words of font info for 24 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,6n,68p,625b,665s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/pu
@@ -544,11 +544,12 @@ ic/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public
 msfonts/cm/cmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfont
-s/symbols/msam10.pfb>
-Output written on balaguera-solutions.pdf (3 pages, 90831 bytes).
+s/cm/cmti10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts
+/symbols/msam10.pfb>
+Output written on balaguera-solutions.pdf (4 pages, 105904 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
- 35 compressed objects within 1 object stream
+ 56 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

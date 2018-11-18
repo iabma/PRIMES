@@ -28,12 +28,12 @@
 			\item[(a)] Find the probability there is exactly one pair of consecutive equal digits.
 			
 			\subparagraph{Solution}Given that the coin is flipped 10 times, we can state that there are $2^{10}$ different binary string patterns. There are 9 potential consecutive pairs of 0 in a binary string of length 10, so there are $\nCr{9}{1}$ possible instances of the presence of only one pair in the string. The pairs are not limited to one side of the coin, so for this problem there are $2*\nCr{9}{1}$ possible instances. Therefore, we can deduce that the probability is:
-			\[ \frac{2*\nCr{9}{1}}{2^{10}}=\frac{\nCr{9}{1}}{2^{9}}=\frac{9}{512} \]
+			\[ \frac{2\cdot\nCr{9}{1}}{2^{10}}=\frac{\nCr{9}{1}}{2^{9}}=\frac{9}{512} \]
 			
 			\item[(b)] Find the probability there are exactly $n$ pairs of consecutive digits, for every $n=0,\dotsc,9$.
 			
 			\subparagraph{Solution}Continuing with the process used in (a), we can apply the same equation to every $n=0,\dotsc,9$:
-			\[ \frac{2*\nCr{9}{n}}{2^{10}}=\frac{\nCr{9}{n}}{2^{9}} \]
+			\[ \frac{2\cdot\nCr{9}{n}}{2^{10}}=\frac{\nCr{9}{n}}{2^{9}} \]
 		\end{enumerate}
 		
 		\item[\textbf{Problem G2.}] For which positive integers p is there a nonzero real number $t$ such that \[ t+\sqrt{p}  \text{ and } \frac{1}{t}+\sqrt{p}\] are both rational?
@@ -145,7 +145,7 @@
 			\[ t_1=1+\frac{15+3t_1}{5}\Rightarrow 5t_1=5+15+3t_1\Rightarrow 2t_1=20\therefore \mybox{$t_1=10$ minutes} \]
 		\end{enumerate}
 	
-		\item[\textbf{Problem G3.}] For a positive integer $n$, let $f(n)$ denote the smallest positive integer which neither divides $n$ nor $n+1$.
+		\item[\textbf{Problem G4.}] For a positive integer $n$, let $f(n)$ denote the smallest positive integer which neither divides $n$ nor $n+1$.
 		
 		\begin{enumerate}
 			\item[(a)] Find the smallest $n$ for which $f(n)=9$.
@@ -163,10 +163,28 @@
 			\subparagraph{Solution} $f(n)$ is always the smallest positive integer which cannot be found in the prime factorization of either $n$ or $n+1$.
 		\end{enumerate}
 	
-		\item[\textbf{Problem G4.}] A pile with $n>=3$ stones is given. Two players Alice and Bob alternate taking stones, with Alice moving first. On a turn, if there are $m$ stones left, a player loses if $m$ is prime; otherwise he/she may pick a divisor $d | m$ such that $1<d<m$ and remove $d$ stones from the pile.
+		\item[\textbf{Problem G5.}] A pile with $n>=3$ stones is given. Two players Alice and Bob alternate taking stones, with Alice moving first. On a turn, if there are $m$ stones left, a player loses if $m$ is prime; otherwise he/she may pick a divisor $d | m$ such that $1<d<m$ and remove $d$ stones from the pile.
 		
 		\begin{enumerate}
+			\item[(a)] Which player wins for $n=6$, $n=8$, $n=10$?
 			
+			\item[(b)] Determine the winning player of all $n$.
+		\end{enumerate}
+	
+		\item[\textbf{Problem G6.}] A perfect power is an integer of the form $b^n$, where $b$, $n>=2$ are integers. Consider matrices $2\times2$ whose entries are perfect powers; we call such matrices \textit{good}.
+		
+		\begin{enumerate}
+			\item[(a)] Find an example fo a good matrix with determinant 2019.
+			
+			\item[(b)] Do there exists any such matrices with determinant 1? If so, comment on how many there could be. (Possible hint: use the theory of Pell equations.)
+		\end{enumerate}
+	
+		\item[\textbf{Problem G7.}] We consider a fixed triangle $ABC$ with side lengths $a=BC,b=CA,c=AB$, and a variable point $X$ in the interior. The lines through $X$ parallel to $\overline{AB}$ and $\overline{AC}$, together with line $\overline{BC}$, determine a triangle $T_a$. The triangles $T_b$ and $T_c$ are defined in a similar way, as shown in the figure. Let $S$ and $p$ denote the average area and perimeter, respectively, of the three triangles $T_a,T_b,T_c$.
+		
+		\begin{enumerate}
+			\item[(a)] Determine all possible values of $S$ as $X$ varies, in terms of $a,b,c$.
+			
+			\item[(b)] Determine all possible values of $p$ as $X$ varies, in terms of $a,b,c$.
 		\end{enumerate}
 	\end{itemize}
 \end{document}
