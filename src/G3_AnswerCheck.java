@@ -1,8 +1,8 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class G3_A_AnswerCheck {
-    private static final long NUM_ITERATIONS = 10000l;
+public class G3_AnswerCheck {
+    private static final long NUM_ITERATIONS = 100000l;
 
     private static void checkA() {
         Random gen = new Random();
@@ -23,7 +23,7 @@ public class G3_A_AnswerCheck {
                 netTime++;
                 numMoves++;
             }
-            System.out.println(numMoves + " minutes");
+            //System.out.println(numMoves + " minutes");
         }
 
         System.out.printf("%d minutes", (int) Math.round(netTime / (double) NUM_ITERATIONS));
@@ -50,7 +50,7 @@ public class G3_A_AnswerCheck {
                 netTime++;
                 numMoves++;
             }
-            System.out.println(numMoves + " minutes");
+            //System.out.println(numMoves + " minutes");
         }
 
         System.out.printf("%d minutes", (int) Math.round(netTime / (double) NUM_ITERATIONS));
@@ -62,7 +62,7 @@ public class G3_A_AnswerCheck {
 
         do {
             System.out.print("Octahedron or Cube? ");
-            input = in.next();
+            input = in.nextLine();
         } while (!input.equalsIgnoreCase("octahedron") && !input.equalsIgnoreCase("cube"));
         if (input.equalsIgnoreCase("octahedron")) {
             checkA();
