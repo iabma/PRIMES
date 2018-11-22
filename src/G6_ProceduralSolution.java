@@ -21,7 +21,7 @@ public class G6_ProceduralSolution {
                         if (perfectPowers[i] * perfectPowers[j] - perfectPowers[k] *
                                 perfectPowers[l] == 2019 || perfectPowers[i] * perfectPowers[j] +
                                 perfectPowers[k] * perfectPowers[l] == 2019) {
-                            System.out.printf("a %d b %d c %d d %d\n", perfectPowers[i],
+                            System.out.printf("a %d d %d c %d b %d\n", perfectPowers[i],
                                     perfectPowers[j], perfectPowers[k], perfectPowers[l]);
                         }
                     }

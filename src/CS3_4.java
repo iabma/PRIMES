@@ -2,6 +2,23 @@ import java.io.File;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+/* PROBLEM 3.4
+   Java 1.8
+   IntelliJ IDEA CE
+   MacOS
+
+   HOW TO RUN: If using IntelliJ, click the green arrow next to the main method. If using a
+   console, compile the file by entering "javac CS3_4.java" while in the correct directory, then
+   entering "java CS3_4". The program will prompt you for input and output file names.
+
+   Test data file: CS3_TestData.txt
+   Test data generator: CS3_StudentGen.java
+
+   REFERENCES:
+   Counting Sort: https://www.geeksforgeeks.org/counting-sort/
+   Radix Sort basics: https://www.geeksforgeeks.org/radix-sort/
+   Java 8 API: https://docs.oracle.com/javase/8/docs/api/
+ */
 public class CS3_4 {
     private static String[] data;
     private static int[] id;
@@ -25,7 +42,7 @@ public class CS3_4 {
         }
     }
 
-    static void countSort(int exp) {
+    static void countingSort(int exp) {
         String[] tempData = new String[numStudents];
         int[] output = new int[numStudents];
         int[] count = new int[EXP];
@@ -48,7 +65,7 @@ public class CS3_4 {
 
     static void radixSort() {
         for (int exp = EXP; 1000000000 / exp > 0; exp *= EXP) {
-            countSort(exp);
+            countingSort(exp);
         }
     }
 
@@ -62,18 +79,24 @@ public class CS3_4 {
         out.close();
     }
 
-    public static void main(String[] args) throws Exception { //UNTRHOWWWW
+    public static void main(String[] args) throws Exception {
         Scanner in = new Scanner(System.in);
+        File input;
+        File output;
 
-        /*System.out.print("Input file name: ");
-        File input = new File(in.next());
-        System.out.print("Output file name: ");
-        File output = new File(in.next());*/
+        do {
+            System.out.print("Input file name: ");
+            input = new File(in.next());
+        } while (!input.exists());
+        do {
+            System.out.print("Output file name: ");
+            output = new File(in.next());
+        } while (!output.exists());
 
         in.close();
 
-        Scanner inputFile = new Scanner(new File("CS3_ProcedurallyGeneratedData.txt"));
-        Scanner second = new Scanner(new File("CS3_ProcedurallyGeneratedData.txt"));
+        Scanner inputFile = new Scanner(input);
+        Scanner second = new Scanner(input);
 
         read(inputFile, second);
 
@@ -84,7 +107,7 @@ public class CS3_4 {
         long endTime = System.nanoTime();
         long netTime = endTime - startTime;
 
-        write(new File("CS3_OrderedData.txt"));
+        write(output);
 
         System.out.printf("Time elapsed (ms): %.2f\n",
                 (double) netTime / 1000000);

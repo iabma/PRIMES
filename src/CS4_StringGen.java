@@ -5,7 +5,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class CS4_StringGen {
     public static void main(String[] args) throws Exception {
         Scanner in = new Scanner(System.in);
-        PrintWriter out = new PrintWriter("CS4Gen.txt");
+        PrintWriter out = new PrintWriter("CS4_TestData.txt");
 
         System.out.print("Number of strings: ");
         long numSets = Long.parseLong(in.next());

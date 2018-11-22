@@ -2,6 +2,23 @@ import java.io.File;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+/* PROBLEM 2
+   Java 1.8
+   IntelliJ IDEA CE
+   MacOS
+
+   HOW TO RUN: If using IntelliJ, click the green arrow next to the main method. If using a
+   console, compile the file by entering "javac CS2.java" while in the correct directory, then
+   entering "java CS2". The program will prompt you for input and output file names.
+
+   Test data file: StudentTestData.txt
+   Test data generator: StudentGen.java
+
+   REFERENCES:
+   Counting Sort: https://www.geeksforgeeks.org/counting-sort/
+   Heap Sort: https://www.geeksforgeeks.org/heap-sort/
+   Java 8 API: https://docs.oracle.com/javase/8/docs/api/
+ */
 class CS2 {
     private static int numStudents;
     private static String[] tempStudentIDs;
@@ -33,7 +50,7 @@ class CS2 {
     private static void heapSort(int length, int startIndex) {
         ;
         for (int i = length / 2 - 1; i >= 0; i--)
-            heapify(length, i, startIndex);
+            heap(length, i, startIndex);
 
         for (int i = length - 1; i >= 0; i--) {
             double temp = GPAs[startIndex];
@@ -44,11 +61,11 @@ class CS2 {
             studentIDs[startIndex] = studentIDs[startIndex + i];
             studentIDs[startIndex + i] = tempData;
 
-            heapify(i, 0, startIndex);
+            heap(i, 0, startIndex);
         }
     }
 
-    private static void heapify(int n, int i, int startIndex) {
+    private static void heap(int n, int i, int startIndex) {
         int largest = i;
         int left = 2 * i + 1;
         int right = 2 * i + 2;
@@ -73,7 +90,7 @@ class CS2 {
             studentIDs[startIndex + i] = studentIDs[startIndex + largest];
             studentIDs[startIndex + largest] = swapData;
 
-            heapify(n, largest, startIndex);
+            heap(n, largest, startIndex);
         }
     }
 
@@ -126,15 +143,21 @@ class CS2 {
 
     public static void main(String[] args) throws Exception {
         Scanner in = new Scanner(System.in);
+        File input;
+        File output;
 
-        /*System.out.print("Input file name: ");
-        File input = new File(in.next());
-        System.out.print("Output file name: ");
-        File output = new File(in.next());*/
+        do {
+            System.out.print("Input file name: ");
+            input = new File(in.next());
+        } while (!input.exists());
+        do {
+            System.out.print("Output file name: ");
+            output = new File(in.next());
+        } while (!output.exists());
 
         in.close();
 
-        Scanner inputFile = new Scanner(new File("Gen.txt"));
+        Scanner inputFile = new Scanner(input);
 
         String[] info = read(inputFile);
 
@@ -149,7 +172,7 @@ class CS2 {
         long endTime = System.nanoTime();
         long netTime = endTime - startTime;
 
-        write(new File("Output.txt"));
+        write(output);
 
         System.out.printf("Time elapsed (ms): %.2f\n",
                 (double) netTime / 1000000);

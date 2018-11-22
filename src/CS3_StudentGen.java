@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class CS3_StudentGen {
     public static void main(String[] args) throws Exception {
         Scanner in = new Scanner(System.in);
-        PrintWriter out = new PrintWriter("CS3_ProcedurallyGeneratedData.txt");
+        PrintWriter out = new PrintWriter("CS3_TestData.txt");
         Random rand = new Random();
         File firstName = new File("FirstNames.txt");
         File lastName = new File("LastNames.txt");

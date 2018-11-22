@@ -42,7 +42,7 @@ public class CS5_NumGen {
 
     public static void main(String[] args) throws FileNotFoundException {
         Scanner in = new Scanner(System.in);
-        PrintWriter out = new PrintWriter("NumSets.txt");
+        PrintWriter out = new PrintWriter("CS5_TestData.txt");
 
         System.out.print("Number of sets: ");
         long numSets = Long.parseLong(in.next());

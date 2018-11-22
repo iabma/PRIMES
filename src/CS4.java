@@ -1,24 +1,40 @@
 import java.io.File;
 import java.util.Scanner;
 
+/* PROBLEM 4
+   Java 1.8
+   IntelliJ IDEA CE
+   MacOS
+
+   HOW TO RUN: If using IntelliJ, click the green arrow next to the main method. If using a
+   console, compile the file by entering "javac CS4.java" while in the correct directory, then
+   entering "java CS4". The program will prompt you for input and output file names.
+
+   Test data file: CS4_TestData.txt
+   Test data generator: CS4_StringGen.java
+
+   REFERENCES:
+   Heap Sort: https://www.geeksforgeeks.org/heap-sort/
+   Java 8 API: https://docs.oracle.com/javase/8/docs/api/
+ */
 public class CS4 {
     private static int numStrings;
     private static String[] strings;
 
     private static void heapSort() {
         for (int i = numStrings / 2 - 1; i >= 0; i--)
-            heapify(numStrings, i);
+            heap(numStrings, i);
 
         for (int i = numStrings - 1; i >= 0; i--) {
             String temp = strings[0];
             strings[0] = strings[i];
             strings[i] = temp;
 
-            heapify(i, 0);
+            heap(i, 0);
         }
     }
 
-    private static void heapify(int n, int i) {
+    private static void heap(int n, int i) {
         int largest = i;
         int left = 2 * i + 1;
         int right = 2 * i + 2;
@@ -39,7 +55,7 @@ public class CS4 {
             strings[i] = strings[largest];
             strings[largest] = swap;
 
-            heapify(n, largest);
+            heap(n, largest);
         }
     }
 

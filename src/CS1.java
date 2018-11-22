@@ -2,6 +2,22 @@ import java.io.File;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+/* PROBLEM 1
+   Java 1.8
+   IntelliJ IDEA CE
+   MacOS
+
+   HOW TO RUN: If using IntelliJ, click the green arrow next to the main method. If using a
+   console, compile the file by entering "javac CS1.java" while in the correct directory, then
+   entering "java CS1". The program will prompt you for input and output file names.
+
+   Test data file: StudentTestData.txt
+   Test data generator: StudentGen.java
+
+   REFERENCES:
+   Counting Sort: https://www.geeksforgeeks.org/counting-sort/
+   Java 8 API: https://docs.oracle.com/javase/8/docs/api/
+ */
 class CS1 {
     private static int numStudents;
     private static String[] studentIDs;

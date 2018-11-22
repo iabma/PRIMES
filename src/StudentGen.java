@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class StudentGen {
     public static void main(String[] args) throws Exception {
         Scanner in = new Scanner(System.in);
-        PrintWriter out = new PrintWriter("Gen.txt");
+        PrintWriter out = new PrintWriter("StudentTestData.txt");
         Random rand = new Random();
         File firstName = new File("FirstNames.txt");
         File lastName = new File("LastNames.txt");
