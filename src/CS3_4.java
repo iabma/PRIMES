@@ -25,6 +25,9 @@ public class CS3_4 {
     private static int numStudents;
     private static final int EXP = 1000;
 
+    /*
+    Reads the given number file and creates a data array using the input.
+     */
     private static void read(Scanner input, Scanner second) {
         numStudents = input.nextInt();
         data = new String[numStudents];
@@ -42,6 +45,9 @@ public class CS3_4 {
         }
     }
 
+    /*
+    Implements a simple counting sort which will be used as the foundation for the radix sort.
+     */
     static void countingSort(int exp) {
         String[] tempData = new String[numStudents];
         int[] output = new int[numStudents];
@@ -63,12 +69,19 @@ public class CS3_4 {
         System.arraycopy(tempData, 0, data, 0, numStudents);
     }
 
+    /*
+
+     */
     static void radixSort() {
         for (int exp = EXP; 1000000000 / exp > 0; exp *= EXP) {
             countingSort(exp);
         }
     }
 
+    /*
+    Writes the ordered students in a determined output file, followed by the time (in
+    milliseconds) it took to run.
+     */
     private static void write(File output) throws Exception {
         PrintWriter out = new PrintWriter(output);
 

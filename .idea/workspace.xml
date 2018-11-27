@@ -2,40 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21b9228e-3534-43cb-953e-83cf264966da" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/todo.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS3_OrderedData.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS3_ProcedurallyGeneratedData.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS4Gen.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gen.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Input.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Math/balaguera-solutions.aux" beforeDir="false" afterPath="$PROJECT_DIR$/Math/balaguera-solutions.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Math/balaguera-solutions.log" beforeDir="false" afterPath="$PROJECT_DIR$/Math/balaguera-solutions.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Math/balaguera-solutions.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Math/balaguera-solutions.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Math/balaguera-solutions.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/Math/balaguera-solutions.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Math/balaguera-solutions.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Math/balaguera-solutions.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NumSets.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PRIMES/CS1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PRIMES/CS1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PRIMES/CS2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PRIMES/CS2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PRIMES/CS3_4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PRIMES/CS3_4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PRIMES/CS3_StudentGen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PRIMES/CS3_StudentGen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PRIMES/CS4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PRIMES/CS4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PRIMES/CS4_StringGen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PRIMES/CS4_StringGen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PRIMES/CS5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PRIMES/CS5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PRIMES/CS5_NumGen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PRIMES/CS5_NumGen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PRIMES/G6_ProceduralSolution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PRIMES/G6_ProceduralSolution.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PRIMES/StudentGen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PRIMES/StudentGen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PRIMES/test.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CS1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CS1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CS2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CS2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CS3_4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CS3_4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CS3_StudentGen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CS3_StudentGen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CS4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CS4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CS4_StringGen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CS4_StringGen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CS5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CS5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CS5_NumGen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CS5_NumGen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/G6_ProceduralSolution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/G6_ProceduralSolution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StudentGen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StudentGen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,28 +27,29 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="10" />
-          <entry key="java" value="6284" />
+          <entry key="java" value="8005" />
           <entry key="txt" value="146" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6284" />
+          <entry key="JAVA" value="8005" />
           <entry key="PLAIN_TEXT" value="156" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="24" />
+          <entry key="java" value="26" />
           <entry key="todo" value="1" />
-          <entry key="txt" value="20" />
+          <entry key="tx" value="1" />
+          <entry key="txt" value="26" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="24" />
-          <entry key="PLAIN_TEXT" value="21" />
+          <entry key="JAVA" value="26" />
+          <entry key="PLAIN_TEXT" value="28" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
@@ -85,13 +64,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CS5.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+            <state relative-caret-position="571">
+              <caret line="307" column="74" selection-start-line="307" selection-start-column="74" selection-end-line="307" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#main#0;class#CS5#0" />
                 <element signature="method#isPrime#0;class#CS5#0" />
                 <element signature="method#smallNumPrimality#0;class#CS5#0" />
                 <element signature="method#isGreater#0;class#CS5#0" />
@@ -111,7 +91,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CS4.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
+            <state relative-caret-position="-1370">
               <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -126,54 +106,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/todo.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="3" column="56" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CS5EData.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CS5EDataN.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CS5NonEData.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CS3_4.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CS2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+            <state relative-caret-position="768">
+              <caret line="48" column="39" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -184,11 +120,55 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CS1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="17" column="62" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
+            <state relative-caret-position="736">
+              <caret line="103" column="74" selection-start-line="103" selection-start-column="74" selection-end-line="103" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#main#0;class#CS1#0" />
+                <element signature="method#read#0;class#CS1#0" />
+                <element signature="method#sort#0;class#CS1#0" />
+                <element signature="method#write#0;class#CS1#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/CS2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="35" column="60" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#main#0;class#CS2#0" />
+                <element signature="method#read#0;class#CS2#0" />
+                <element signature="method#sortGradYears#0;class#CS2#0" />
+                <element signature="method#sortGPAs#0;class#CS2#0" />
+                <element signature="method#write#0;class#CS2#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Output.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="449">
+              <caret line="100000" column="5" selection-start-line="100000" selection-start-column="5" selection-end-line="100000" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LastNames.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StudentTestData.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="66614" selection-start-line="66614" selection-end-line="66614" />
             </state>
           </provider>
         </entry>
@@ -210,6 +190,7 @@
       <find>numstudents</find>
       <find>him, jim</find>
       <find>6</find>
+      <find>birden</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -236,11 +217,11 @@
         <option value="$PROJECT_DIR$/src/CS4_StringGen.java" />
         <option value="$PROJECT_DIR$/src/StudentGen.java" />
         <option value="$PROJECT_DIR$/src/CS5.java" />
-        <option value="$PROJECT_DIR$/src/CS1.java" />
-        <option value="$PROJECT_DIR$/src/CS2.java" />
-        <option value="$PROJECT_DIR$/src/CS3_4.java" />
         <option value="$PROJECT_DIR$/src/CS4.java" />
         <option value="$PROJECT_DIR$/todo.txt" />
+        <option value="$PROJECT_DIR$/src/CS3_4.java" />
+        <option value="$PROJECT_DIR$/src/CS2.java" />
+        <option value="$PROJECT_DIR$/src/CS1.java" />
       </list>
     </option>
   </component>
@@ -266,11 +247,6 @@
             <path>
               <item name="PRIMES" type="b2602c69:ProjectViewProjectNode" />
               <item name="PRIMES" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PRIMES" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PRIMES" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -281,7 +257,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542859026723" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543286983629" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
@@ -297,9 +273,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.StudentGen">
-    <configuration name="CS3_StudentGen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CS3_StudentGen" />
+  <component name="RunManager" selected="Application.CS1">
+    <configuration name="CS1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CS1" />
+      <module name="PRIMES" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CS2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CS2" />
+      <module name="PRIMES" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CS3_4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CS3_4" />
       <module name="PRIMES" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -307,20 +297,6 @@
     </configuration>
     <configuration name="CS4_StringGen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CS4_StringGen" />
-      <module name="PRIMES" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CS5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CS5" />
-      <module name="PRIMES" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="G6_ProceduralSolution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="G6_ProceduralSolution" />
       <module name="PRIMES" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -334,19 +310,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.G6_ProceduralSolution" />
-      <item itemvalue="Application.CS5" />
-      <item itemvalue="Application.CS3_StudentGen" />
       <item itemvalue="Application.CS4_StringGen" />
       <item itemvalue="Application.StudentGen" />
+      <item itemvalue="Application.CS3_4" />
+      <item itemvalue="Application.CS1" />
+      <item itemvalue="Application.CS2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CS1" />
+        <item itemvalue="Application.CS2" />
+        <item itemvalue="Application.CS3_4" />
         <item itemvalue="Application.StudentGen" />
         <item itemvalue="Application.CS4_StringGen" />
-        <item itemvalue="Application.CS3_StudentGen" />
-        <item itemvalue="Application.CS5" />
-        <item itemvalue="Application.G6_ProceduralSolution" />
       </list>
     </recent_temporary>
   </component>
@@ -396,7 +372,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5707071" visible="true" weight="0.13893376" />
       <window_info id="Image Layers" order="1" />
@@ -423,8 +398,36 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info anchor="right" id="Structure" order="8" sideWeight="0.42929292" side_tool="true" visible="true" weight="0.12358643" />
+      <window_info anchor="right" id="Structure" order="8" sideWeight="0.42929292" side_tool="true" weight="0.12358643" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5707071" weight="0.13893376" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.18630137" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32876712" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32876712" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32876712" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32876712" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Structure" order="8" sideWeight="0.42929292" side_tool="true" weight="0.12358643" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -585,16 +588,6 @@
     <entry file="file://$PROJECT_DIR$/Input.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/StudentTestData.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Output.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CS4_StringGen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -604,49 +597,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CS1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="62" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CS2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CS3_4.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CS4.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CS3_TestData.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -665,26 +615,49 @@
     <entry file="file://$PROJECT_DIR$/CS5EData.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CS5NonEData.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CS5EDataN.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/CS5NonEData.txt">
+    <entry file="file://$PROJECT_DIR$/CS3_TestData.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CS4.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        <state relative-caret-position="-1370">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/LastNames.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ouptut.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Output.tx">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/CS5.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+        <state relative-caret-position="571">
+          <caret line="307" column="74" selection-start-line="307" selection-start-column="74" selection-end-line="307" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#CS5#0" />
             <element signature="method#isPrime#0;class#CS5#0" />
             <element signature="method#smallNumPrimality#0;class#CS5#0" />
             <element signature="method#isGreater#0;class#CS5#0" />
@@ -696,6 +669,59 @@
             <element signature="method#sortByPrimes#0;class#CS5#0" />
             <element signature="method#sortByOther#0;class#CS5#0" />
             <element signature="method#write#0;class#CS5#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StudentTestData.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="66614" selection-start-line="66614" selection-end-line="66614" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CS3_4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="48" column="39" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Output.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="100000" column="5" selection-start-line="100000" selection-start-column="5" selection-end-line="100000" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CS1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="103" column="74" selection-start-line="103" selection-start-column="74" selection-end-line="103" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#CS1#0" />
+            <element signature="method#read#0;class#CS1#0" />
+            <element signature="method#sort#0;class#CS1#0" />
+            <element signature="method#write#0;class#CS1#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CS2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="35" column="60" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#CS2#0" />
+            <element signature="method#read#0;class#CS2#0" />
+            <element signature="method#sortGradYears#0;class#CS2#0" />
+            <element signature="method#sortGPAs#0;class#CS2#0" />
+            <element signature="method#write#0;class#CS2#0" />
           </folding>
         </state>
       </provider>

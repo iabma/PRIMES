@@ -24,6 +24,42 @@ class CS1 {
     private static String[] orderedStudentIDs;
     private static int[] gradYears;
 
+    /*
+    Prompts the user for the necessary correct file names, then sorts the data found in the input
+    file and writes the sorted data into the entered output file.
+     */
+    public static void main(String[] args) throws Exception {
+        Scanner in = new Scanner(System.in);
+        File input;
+        File output;
+
+        do {
+            System.out.print("Input file name: ");
+            input = new File(in.next());
+        } while (!input.exists());
+
+        System.out.print("Output file name: ");
+        output = new File(in.next());
+
+        in.close();
+
+        Scanner inputFile = new Scanner(input);
+        String[] readInput = read(inputFile);
+        inputFile.close();
+
+        long startTime = System.nanoTime();
+
+        sort(readInput);
+
+        long endTime = System.nanoTime();
+        long netTime = endTime - startTime;
+
+        write(output, netTime);
+    }
+
+    /*
+    Reads the given number file and creates an array using the input.
+     */
     private static String[] read(Scanner input) {
         numStudents = input.nextInt();
         studentIDs = new String[numStudents];
@@ -39,13 +75,16 @@ class CS1 {
         return info;
     }
 
+    /*
+    Simple counting sort, uses a modified version of the graduations years in order to save storage.
+     */
     private static void sort(String[] input) {
         int[] countArray = new int[5];
         orderedStudentIDs = new String[numStudents];
 
         for (int i = 0; i < numStudents; i++) {
-            gradYears[i] = Integer.parseInt(input[i].substring(input[i].length() - 4));
-            countArray[gradYears[i] - 2018]++;
+            gradYears[i] = Integer.parseInt(input[i].substring(input[i].length() - 4)) - 2018;
+            countArray[gradYears[i]]++;
         }
 
         for (int i = 1; i < 5; i++) {
@@ -53,45 +92,21 @@ class CS1 {
         }
 
         for (int i = numStudents - 1; i >= 0; i--) {
-            orderedStudentIDs[countArray[gradYears[i] - 2018] - 1] = studentIDs[i];
-            countArray[gradYears[i] - 2018]--;
+            countArray[gradYears[i]]--;
+            orderedStudentIDs[countArray[gradYears[i]]] = studentIDs[i];
         }
     }
 
-    private static void write(File output) throws Exception {
+    /*
+    Writes the ordered students in a determined output file, followed by the time (in
+    milliseconds) it took to run.
+     */
+    private static void write(File output, long netTime) throws Exception {
         PrintWriter out = new PrintWriter(output);
-
         for (int i = 0; i < numStudents; i++) {
             out.println(orderedStudentIDs[i]);
         }
-
+        out.printf("%.2f", (double) netTime / 1000000);
         out.close();
-    }
-
-    public static void main(String[] args) throws Exception {
-        Scanner in = new Scanner(System.in);
-
-        System.out.print("Input file name: ");
-        File input = new File(in.next());
-        System.out.print("Output file name: ");
-        File output = new File(in.next());
-
-        in.close();
-
-        Scanner inputFile = new Scanner(input);
-
-        String[] readInput = read(inputFile);
-
-        long startTime = System.nanoTime();
-
-        sort(readInput);
-
-        long endTime = System.nanoTime();
-        long netTime = endTime - startTime;
-
-        write(output);
-
-        System.out.printf("Time elapsed (ms): %.2f\n",
-                (double) netTime / 1000000);
     }
 }
