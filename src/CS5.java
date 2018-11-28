@@ -8,9 +8,9 @@ import java.util.Scanner;
    IntelliJ IDEA CE
    MacOS
 
-   HOW TO RUN: If using IntelliJ, click the green arrow next to the main method. If using a
-   console, compile the file by entering "javac CS5.java" while in the correct directory, then
-   entering "java CS5". The program will prompt you for input and output file names.
+   HOW TO RUN: If using a console, compile the file by entering "javac CS1.java" while in the
+   correct directory, then entering "java CS1". The program will prompt you for input and output
+   file names.
 
    Test data file: CS5_TestData.txt
    Test data generator: CS5_NumGen.java
@@ -43,31 +43,25 @@ public class CS5 {
             System.out.print("Input file name: ");
             input = new File(in.next());
         } while (!input.exists());
-        do {
-            System.out.print("Output file name: ");
-            output = new File(in.next());
-        } while (!output.exists());
+
+        System.out.print("Output file name: ");
+        output = new File(in.next());
 
         in.close();
 
         Scanner inputFile = new Scanner(input);
         read(inputFile);
         inputFile.close();
-        //System.out.println("File read. Indexing...");
 
         long startTime = System.nanoTime();
 
         index();
-        //System.out.println("Indexed.");
 
         sortByIndex();
-        //System.out.println("Sorted by prime number index.");
 
         sortByPrimes();
-        //System.out.println("Sorted by prime number value.");
 
         sortByOther();
-        //System.out.println("Sorted by other values.");
 
         long endTime = System.nanoTime();
         long netTime = endTime - startTime;
@@ -77,8 +71,8 @@ public class CS5 {
 
     /*
     If the number to check is 4 digits, it is referred to smallNumPrimality(). Otherwise, it is
-    converted to a BigInteger so the BPSW primality test built into the BigInteger Java library
-    can be utilized.
+    converted to a BigInteger so the BPSW probabilistic primality test built into the BigInteger
+    Java library can be utilized.
      */
     private static boolean isPrime(long num) {
         if (num < 10000) return smallNumPrimality(num);

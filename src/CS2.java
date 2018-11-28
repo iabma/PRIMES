@@ -7,9 +7,9 @@ import java.util.Scanner;
    IntelliJ IDEA CE
    MacOS
 
-   HOW TO RUN: If using IntelliJ, click the green arrow next to the main method. If using a
-   console, compile the file by entering "javac CS2.java" while in the correct directory, then
-   entering "java CS2". The program will prompt you for input and output file names.
+   HOW TO RUN: If using a console, compile the file by entering "javac CS1.java" while in the
+   correct directory, then entering "java CS1". The program will prompt you for input and output
+   file names.
 
    Test data file: StudentTestData.txt
    Test data generator: StudentGen.java

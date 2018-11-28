@@ -7,9 +7,9 @@ import java.util.Scanner;
    IntelliJ IDEA CE
    MacOS
 
-   HOW TO RUN: If using IntelliJ, click the green arrow next to the main method. If using a
-   console, compile the file by entering "javac CS3_4.java" while in the correct directory, then
-   entering "java CS3_4". The program will prompt you for input and output file names.
+   HOW TO RUN: If using a console, compile the file by entering "javac CS1.java" while in the
+   correct directory, then entering "java CS1". The program will prompt you for input and output
+   file names.
 
    Test data file: CS3_TestData.txt
    Test data generator: CS3_StudentGen.java
@@ -24,6 +24,42 @@ public class CS3_4 {
     private static int[] id;
     private static int numStudents;
     private static final int EXP = 1000;
+
+    /*
+    Prompts the user for the necessary correct file names, then uses a radix sort to rearrange
+    the students by ID, only performing three passes in which three digits are compared. Then,
+    the sorted data is written to the output file with the time elapsed written afterwards.
+     */
+    public static void main(String[] args) throws Exception {
+        Scanner in = new Scanner(System.in);
+        File input;
+        File output;
+
+        do {
+            System.out.print("Input file name: ");
+            input = new File(in.next());
+        } while (!input.exists());
+
+        System.out.print("Output file name: ");
+        output = new File(in.next());
+
+        in.close();
+
+        Scanner inputFile = new Scanner(input);
+        Scanner second = new Scanner(input);
+        read(inputFile, second);
+        inputFile.close();
+        second.close();
+
+        long startTime = System.nanoTime();
+
+        radixSort();
+
+        long endTime = System.nanoTime();
+        long netTime = endTime - startTime;
+
+        write(output, netTime);
+    }
 
     /*
     Reads the given number file and creates a data array using the input.
@@ -48,7 +84,7 @@ public class CS3_4 {
     /*
     Implements a simple counting sort which will be used as the foundation for the radix sort.
      */
-    static void countingSort(int exp) {
+    private static void countingSort(int exp) {
         String[] tempData = new String[numStudents];
         int[] output = new int[numStudents];
         int[] count = new int[EXP];
@@ -70,9 +106,9 @@ public class CS3_4 {
     }
 
     /*
-
+    Implements a slightly optimized radix sort which iterates through three digits at a time.
      */
-    static void radixSort() {
+    private static void radixSort() {
         for (int exp = EXP; 1000000000 / exp > 0; exp *= EXP) {
             countingSort(exp);
         }
@@ -82,47 +118,12 @@ public class CS3_4 {
     Writes the ordered students in a determined output file, followed by the time (in
     milliseconds) it took to run.
      */
-    private static void write(File output) throws Exception {
+    private static void write(File output, long netTime) throws Exception {
         PrintWriter out = new PrintWriter(output);
-
         for (int i = 0; i < numStudents; i++) {
             out.println(data[i]);
         }
-
+        out.printf("%.2f", (double) netTime / 1000000);
         out.close();
-    }
-
-    public static void main(String[] args) throws Exception {
-        Scanner in = new Scanner(System.in);
-        File input;
-        File output;
-
-        do {
-            System.out.print("Input file name: ");
-            input = new File(in.next());
-        } while (!input.exists());
-        do {
-            System.out.print("Output file name: ");
-            output = new File(in.next());
-        } while (!output.exists());
-
-        in.close();
-
-        Scanner inputFile = new Scanner(input);
-        Scanner second = new Scanner(input);
-
-        read(inputFile, second);
-
-        long startTime = System.nanoTime();
-
-        radixSort();
-
-        long endTime = System.nanoTime();
-        long netTime = endTime - startTime;
-
-        write(output);
-
-        System.out.printf("Time elapsed (ms): %.2f\n",
-                (double) netTime / 1000000);
     }
 }
