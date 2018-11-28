@@ -3,6 +3,18 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
+/* PROBLEM 5 TEST FILE GENERATOR
+   Java 1.8
+   IntelliJ IDEA CE
+   MacOS
+
+   HOW TO RUN: If using a console, compile the file by entering "javac CS1.java" while in the
+   correct directory, then entering "java CS1". The program will prompt you for input and output
+   file names.
+
+   REFERENCES:
+   Java 8 API: https://docs.oracle.com/javase/8/docs/api/
+ */
 public class CS5_NumGen {
     private static long Long(long bound) {
         return ThreadLocalRandom.current().nextLong(1, bound);

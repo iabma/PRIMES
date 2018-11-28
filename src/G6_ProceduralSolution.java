@@ -1,3 +1,15 @@
+/* MATH PROBLEM 6 PROCEDURAL ANSWER
+   Java 1.8
+   IntelliJ IDEA CE
+   MacOS
+
+   HOW TO RUN: If using a console, compile the file by entering "javac CS1.java" while in the
+   correct directory, then entering "java CS1". The program will prompt you for input and output
+   file names.
+
+   REFERENCES:
+   Java 8 API: https://docs.oracle.com/javase/8/docs/api/
+ */
 public class G6_ProceduralSolution {
     public static int[] genPerfectPowers(int extent, int powerLim) {
         int[] holder = new int[extent * powerLim];

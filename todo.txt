@@ -1,4 +1,3 @@
 To-Do List:
 Change heapsort variable names
-Finish commenting all programs
-Finish the header for all gen programs and math programs
+Finish commenting all gen programs

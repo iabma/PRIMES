@@ -1,6 +1,18 @@
 import java.util.Random;
 import java.util.Scanner;
 
+/* MATH PROBLEM 1 PROCEDURAL ANSWER
+   Java 1.8
+   IntelliJ IDEA CE
+   MacOS
+
+   HOW TO RUN: If using a console, compile the file by entering "javac CS1.java" while in the
+   correct directory, then entering "java CS1". The program will prompt you for input and output
+   file names.
+
+   REFERENCES:
+   Java 8 API: https://docs.oracle.com/javase/8/docs/api/
+ */
 public class G1_AnswerCheck {
     private static final int NUM_ITERATIONS = 10000000;
 

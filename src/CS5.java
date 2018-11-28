@@ -30,7 +30,7 @@ public class CS5 {
     private static int numSets;
 
     /*
-    Inputs the desired data file and output file, then reads the data. The timer is started, and
+    Reads the desired data file and output file, then reads the data. The timer is started, and
     the necessary pre-calculations are made. Then, the three sorting steps are executed. The timer
     is stopped, and the ordered set is written to the desired output file.
      */
@@ -75,9 +75,9 @@ public class CS5 {
     Java library can be utilized.
      */
     private static boolean isPrime(long num) {
-        if (num < 10000) return smallNumPrimality(num);
+        if (num < 1000000) return smallNumPrimality(num);
         BigInteger numToCheck = BigInteger.valueOf(num);
-        return numToCheck.isProbablePrime(5);
+        return numToCheck.isProbablePrime(3);
     }
 
     /*
@@ -195,7 +195,7 @@ public class CS5 {
     }
 
     /*
-    A conventional copmlementary "heapify" method tweaked to accomodate sorting by both prime
+    A conventional complementary "heapify" method tweaked to accommodate sorting by both prime
     numbers and their respective number sets.
      */
     private static void heap(long[] input, int n, int i, int startIndex, boolean single) {
