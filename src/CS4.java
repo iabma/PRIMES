@@ -128,28 +128,25 @@ public class CS4 {
     /*
     Complementary "heapify" method, where the comparison is alphabetical.
      */
-    private static void heap(int n, int i, int startIndex) {
-        int largest = i;
-        int left = 2 * i + 1;
-        int right = 2 * i + 2;
+    private static void heap(int heapSize, int root, int startIndex) {
+        int largest = root;
+        int left = 2 * root + 1;
+        int right = 2 * root + 2;
 
-        // If left child is larger than root
-        if (left < n && compare(startIndex + left, startIndex + largest)) {
+        if (left < heapSize && compare(startIndex + left, startIndex + largest)) {
             largest = left;
         }
 
-        // If right child is larger than largest so far
-        if (right < n && compare(startIndex + right, startIndex + largest)) {
+        if (right < heapSize && compare(startIndex + right, startIndex + largest)) {
             largest = right;
         }
 
-        // If largest is not root
-        if (largest != i) {
-            String swap = strings[startIndex + i];
-            strings[startIndex + i] = strings[startIndex + largest];
+        if (largest != root) {
+            String swap = strings[startIndex + root];
+            strings[startIndex + root] = strings[startIndex + largest];
             strings[startIndex + largest] = swap;
 
-            heap(n, largest, startIndex);
+            heap(heapSize, largest, startIndex);
         }
     }
 

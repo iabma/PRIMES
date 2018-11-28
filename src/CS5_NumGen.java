@@ -8,18 +8,24 @@ import java.util.concurrent.ThreadLocalRandom;
    IntelliJ IDEA CE
    MacOS
 
-   HOW TO RUN: If using a console, compile the file by entering "javac CS1.java" while in the
-   correct directory, then entering "java CS1". The program will prompt you for input and output
-   file names.
+   HOW TO RUN: If using a console, compile the file by entering "javac CS5_NumGen.java" while in
+   the correct directory, then entering "java CS5_NumGen".
 
    REFERENCES:
    Java 8 API: https://docs.oracle.com/javase/8/docs/api/
  */
 public class CS5_NumGen {
+    /*
+    Returns a randomly generate long given an upper bound.
+     */
     private static long Long(long bound) {
         return ThreadLocalRandom.current().nextLong(1, bound);
     }
 
+    /*
+    Repeatedly produces a long with the given bound until it finds one which is prime, then
+    returns it.
+     */
     private static long findPrime(long bound) {
         while (true) {
             long num = Long(bound);
@@ -29,6 +35,10 @@ public class CS5_NumGen {
         }
     }
 
+    /*
+    Repeatedly produces a long with the given bound until it finds one which is composite, then
+    returns it.
+     */
     private static long findComposite(long bound) {
         while (true) {
             long num = Long(bound);
@@ -38,6 +48,9 @@ public class CS5_NumGen {
         }
     }
 
+    /*
+    A slow yet very simple deterministic primality test.
+     */
     private static boolean isPrime(long num) {
         if (num == 1) {
             return false;
@@ -52,6 +65,11 @@ public class CS5_NumGen {
         return true;
     }
 
+    /*
+    Prompts the user for the desired number of number sets, then randomly generates them. In
+    order to ensure diversity and large prime numbers, an order of magnitude from 1 to 17 is
+    selected, then the number is generated within or less than that order of magnitude.
+     */
     public static void main(String[] args) throws FileNotFoundException {
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter("CS5_TestData.txt");

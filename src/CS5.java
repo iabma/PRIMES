@@ -198,34 +198,31 @@ public class CS5 {
     A conventional complementary "heapify" method tweaked to accommodate sorting by both prime
     numbers and their respective number sets.
      */
-    private static void heap(long[] input, int n, int i, int startIndex, boolean single) {
-        int largest = i;
-        int left = 2 * i + 1;
-        int right = 2 * i + 2;
+    private static void heap(long[] input, int heapSize, int root, int startIndex, boolean single) {
+        int largest = root;
+        int left = 2 * root + 1;
+        int right = 2 * root + 2;
 
-        // If left child is larger than root
-        if (left < n && isGreater(startIndex + left, startIndex + largest, single)) {
+        if (left < heapSize && isGreater(startIndex + left, startIndex + largest, single)) {
             largest = left;
         }
 
-        // If right child is larger than largest so far
-        if (right < n && isGreater(startIndex + right, startIndex + largest, single)) {
+        if (right < heapSize && isGreater(startIndex + right, startIndex + largest, single)) {
             largest = right;
         }
 
-        // If largest is not root
-        if (largest != i) {
+        if (largest != root) {
             if (single) {
-                long swapPrimes = input[startIndex + i];
-                input[startIndex + i] = input[startIndex + largest];
+                long swapPrimes = input[startIndex + root];
+                input[startIndex + root] = input[startIndex + largest];
                 input[startIndex + largest] = swapPrimes;
             }
 
-            long[] swapData = data[startIndex + i];
-            data[startIndex + i] = data[startIndex + largest];
+            long[] swapData = data[startIndex + root];
+            data[startIndex + root] = data[startIndex + largest];
             data[startIndex + largest] = swapData;
 
-            heap(input, n, largest, startIndex, single);
+            heap(input, heapSize, largest, startIndex, single);
         }
     }
 

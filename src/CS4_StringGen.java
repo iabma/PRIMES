@@ -7,14 +7,17 @@ import java.util.concurrent.ThreadLocalRandom;
    IntelliJ IDEA CE
    MacOS
 
-   HOW TO RUN: If using a console, compile the file by entering "javac CS1.java" while in the
-   correct directory, then entering "java CS1". The program will prompt you for input and output
-   file names.
+   HOW TO RUN: If using a console, compile the file by entering "javac CS4_StringGen.java" while in
+   the correct directory, then entering "java CS4_StringGen".
 
    REFERENCES:
    Java 8 API: https://docs.oracle.com/javase/8/docs/api/
  */
 public class CS4_StringGen {
+    /*
+    Prompts the user to enter the desire number of strings, then randomly produces strings
+    varying from 1 to 40 letters in length.
+     */
     public static void main(String[] args) throws Exception {
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter("CS4_TestData.txt");

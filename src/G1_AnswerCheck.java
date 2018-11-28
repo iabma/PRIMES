@@ -6,9 +6,9 @@ import java.util.Scanner;
    IntelliJ IDEA CE
    MacOS
 
-   HOW TO RUN: If using a console, compile the file by entering "javac CS1.java" while in the
-   correct directory, then entering "java CS1". The program will prompt you for input and output
-   file names.
+   HOW TO RUN: If using a console, compile the file by entering "javac G1_AnswerCheck.java" while in
+   the correct directory, then entering "java G1_AnswerCheck". The program will prompt you for
+   input and output file names.
 
    REFERENCES:
    Java 8 API: https://docs.oracle.com/javase/8/docs/api/
@@ -16,6 +16,10 @@ import java.util.Scanner;
 public class G1_AnswerCheck {
     private static final int NUM_ITERATIONS = 10000000;
 
+    /*
+    Given an inputted number of pairs of consecutive digits, the program runs 10 million times in
+    order to get as accurate of an answer as possible for the probability.
+     */
     public static void main(String[] args) {
         Random gen = new Random();
         Scanner in = new Scanner(System.in);

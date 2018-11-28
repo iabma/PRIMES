@@ -8,15 +8,19 @@ import java.util.Scanner;
    IntelliJ IDEA CE
    MacOS
 
-   HOW TO RUN: If using a console, compile the file by entering "javac CS1.java" while in the
-   correct directory, then entering "java CS1". The program will prompt you for input and output
-   file names.
+   HOW TO RUN: If using a console, compile the file by entering "javac StudentGen.java" while in the
+   correct directory, then entering "java StudentGen".
 
    REFERENCES:
    Java 8 API: https://docs.oracle.com/javase/8/docs/api/
    Name Databases: https://github.com/smashew/NameDatabases
  */
 public class StudentGen {
+    /*
+    Prompts the user for the number of students wanted in the generated file. Then, two string
+    arrays are created containing a list of first and last names, which are then randomly
+    selected for every produced student, along with a randomly generated GPA and graduation year.
+     */
     public static void main(String[] args) throws Exception {
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter("StudentTestData.txt");
