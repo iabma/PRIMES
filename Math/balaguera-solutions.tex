@@ -10,7 +10,7 @@
 \usepackage{setspace}
 \usepackage{csquotes}
 \usepackage{yfonts}
-\linespread{1.6}
+\linespread{1.5}
 \usepackage{parskip}
 \setlength{\parindent}{15pt}
 \usepackage{fullpage}
@@ -53,25 +53,25 @@
 		\begin{enumerate}
 			\item[(a)] Find the probability there is exactly one pair of consecutive equal digits.
 			
-			\subparagraph{\textit{Solution}} Given that the coin is flipped 10 times, we can state that there are $2^{10}$ different binary string patterns. There are 9 potential consecutive pairs of 0 in a binary string of length 10, so there are $\nCr{9}{1}$ possible instances of the presence of only one pair in the string. The pairs are not limited to one side of the coin, so for this problem there are $2*\nCr{9}{1}$ possible instances. Therefore, we can deduce that the probability is:
+			\subparagraph{\textbf{Solution}} Given that the coin is flipped 10 times, we can state that there are $2^{10}$ different binary string patterns. There are 9 potential consecutive pairs of 0 in a binary string of length 10, so there are $\nCr{9}{1}$ possible instances of the presence of only one pair in the string. The pairs are not limited to one side of the coin, so for this problem there are $2*\nCr{9}{1}$ possible instances. Therefore, we can deduce that the probability is:
 			\[ \frac{2\cdot\nCr{9}{1}}{2^{10}}=\frac{\nCr{9}{1}}{2^{9}}=\frac{9}{512} \]
 			
 			\item[(b)] Find the probability there are exactly $n$ pairs of consecutive digits, for every $n=0,\dotsc,9$.
 			
-			\subparagraph{\textit{Solution}} Continuing with the process used in (a), we can apply the same equation to every $n=0,\dotsc,9$:
+			\subparagraph{\textbf{Solution}} Continuing with the process used in (a), we can apply the same equation to every $n=0,\dotsc,9$:
 			\[ \frac{2\cdot\nCr{9}{n}}{2^{10}}=\frac{\nCr{9}{n}}{2^{9}} \]
 		\end{enumerate}
 		
 		\textbf{Problem G2.} For which positive integers p is there a nonzero real number $t$ such that \[ t+\sqrt{p}  \text{ and } \frac{1}{t}+\sqrt{p}\] are both rational?
 		
-		\subparagraph{\textit{Solution}} Yeah idk yet man
+		\subparagraph{\textbf{Solution}} Yeah idk yet man (add references)
 		
 		\textbf{Problem G3.} Points $A$ and $B$ are two opposite vertices of a regular octahedron. An ant starts at point $A$ and, every minute, walks randomly to a neighboring vertex.
 		
 		\begin{enumerate}
 			\item[(a)] Find the expected (i.e. average) amount of time for the ant to reach vertex $B$.
 			
-			\subparagraph{\textit{Solution}} Let $t_i$ be the expected amount of time for the ant to reach vertex 6 from vertex $i$ on the octahedron.
+			\subparagraph{\textbf{Solution}} Let $t_i$ be the expected amount of time for the ant to reach vertex 6 from vertex $i$ on the octahedron.
 			
 			\begin{center}
 				
@@ -120,7 +120,7 @@
 			
 			\item[(b)] Compute the same expected value if the octahedron is replaced by a cube (where $A$ and $B$ are still opposite vertices).
 			
-			\subparagraph{\textit{Solution}} Let $t_i$ be the expected amount of time for the ant to reach vertex 8 from vertex $i$ on the cube.
+			\subparagraph{\textbf{Solution}} Let $t_i$ be the expected amount of time for the ant to reach vertex 8 from vertex $i$ on the cube.
 			
 			\begin{center}
 				\begin{tikzpicture}[z={(-.3cm,-.3cm)},
@@ -183,18 +183,18 @@
 		\begin{enumerate}
 			\item[(a)] Find the smallest $n$ for which $f(n)=9$.
 			
-			\subparagraph{\textit{Solution}} Since $f(n)=9$, all integers from 1 to 8 must be factors of $n$ or $n+1$. Furthermore, since 8 is a multiple of both 4 and 2, and 6 is a multiple of 2, we can narrow down the necessary factors to 3, 5, 7, and 8. Therefore, either $n$ or $n+1$ must end in a 0 or 5. Combining this limitation with the fact that either $n$ or $n+1$ must be a multiple or one away from a multiple of 3, 7, or 8 further narrows down the possibilities. Using this method, the answer reveals itself as $n=104$, since the factors of 104 and 105 are 3, 5, 8, and 13.
+			\subparagraph{\textbf{Solution}} Since $f(n)=9$, all integers from 1 to 8 must be factors of $n$ or $n+1$. Furthermore, since 8 is a multiple of both 4 and 2, and 6 is a multiple of 2, we can narrow down the necessary factors to 3, 5, 7, and 8. Therefore, either $n$ or $n+1$ must end in a 0 or 5. Combining this limitation with the fact that either $n$ or $n+1$ must be a multiple or one away from a multiple of 3, 7, or 8 further narrows down the possibilities. Using this method, the answer reveals itself as $n=104$, since the factors of 104 and 105 are 3, 5, 8, and 13.
 			
 			\item[(b)] Is there an $n$ for which $f(n)=2018$?
 			
-			\subparagraph{\textit{Solution}} Similar to (a), all integers from 1 to 2017 must be factors of $n$ or $n+1$. However, since the two factors of 2018 (2 and 1009) both fall into that range, the answer cannot simply be 2017!. Therefore, and equation can be setup to find a number pair where 1009 is only a factor of one of the numbers:
+			\subparagraph{\textbf{Solution}} Similar to (a), all integers from 1 to 2017 must be factors of $n$ or $n+1$. However, since the two factors of 2018 (2 and 1009) both fall into that range, the answer cannot simply be 2017!. Therefore, and equation can be setup to find a number pair where 1009 is only a factor of one of the numbers:
 			\[ \frac{2017!}{1009}=1009x+1\Rightarrow 1009^2x=2017!-1009\Rightarrow x=\frac{2017!-1009}{1009^2} \]
 			Plugging the above expression into Sage Math and checking if it is an integer returns true, meaning:
 			\[ n=\frac{2017!-1009}{1009} \]
 			
 			\item[(c)] Which values can $f(n)$ take as $n$ varies?
 			
-			\subparagraph{\textit{Solution}} $f(n)$ is always the smallest positive integer which cannot be found in the prime factorization of either $n$ or $n+1$.
+			\subparagraph{\textbf{Solution}} $f(n)$ is always the smallest positive integer which cannot be found in the prime factorization of either $n$ or $n+1$.
 		\end{enumerate}
 	
 		\textbf{Problem G5.} A pile with $n>=3$ stones is given. Two players Alice and Bob alternate taking stones, with Alice moving first. On a turn, if there are $m$ stones left, a player loses if $m$ is prime; otherwise he/she may pick a divisor $d | m$ such that $1<d<m$ and remove $d$ stones from the pile.
@@ -202,12 +202,12 @@
 		\begin{enumerate}
 			\item[(a)] Which player wins for $n=6$, $n=8$, $n=10$?
 			
-			\subparagraph{\textit{Solution}} If $n=6$, $d$ must be either 3 or 2. Therefore, in the subsequent round, Alice wins, since she can take 3 stones, leaving Bob with 3, a prime number. If $n=8$, $d$ must be either 4 or 2. The resulting $m$ would be either 4 or 6, which are both numbers Bob can win from, since 4 immediately leads to a prime pile, and we have already shown that whoever moves first when $n=6$ will win. If $n=10$, $d$ must be either 5 or 2. The resulting $m$ would be either 8 or 5. 5 is a prime number, so Alice wins.
+			\subparagraph{\textbf{Solution}} If $n=6$, $d$ must be either 3 or 2. Therefore, in the subsequent round, Alice wins, since she can take 3 stones, leaving Bob with 3, a prime number. If $n=8$, $d$ must be either 4 or 2. The resulting $m$ would be either 4 or 6, which are both numbers Bob can win from, since 4 immediately leads to a prime pile, and we have already shown that whoever moves first when $n=6$ will win. If $n=10$, $d$ must be either 5 or 2. The resulting $m$ would be either 8 or 5. 5 is a prime number, so Alice wins.
 			\[ \text{$n=6$: Alice; $n=8$: Bob; $n=10$: Alice} \]
 			
 			\item[(b)] Determine the winning player of all $n$.
 			
-			\subparagraph{\textit{Solution}} As seen in (a), the winner of the game when there are $n$ stones is dependent on the winner of the game for potential $m$ values. By recognizing this fact, a list of the first 40 values can be determined:
+			\subparagraph{\textbf{Solution}} As seen in (a), the winner of the game when there are $n$ stones is dependent on the winner of the game for potential $m$ values. By recognizing this fact, a list of the first 40 values can be determined:
 			
 			\begin{minipage}{0.2\textwidth}
 			\begin{center}
@@ -286,14 +286,14 @@
 		\begin{enumerate}
 			\item[(a)] Find an example for a good matrix with determinant 2019.
 			
-			\subparagraph{\textit{Solution}} When put through a program I wrote (included in my CS .zip file), I discovered several small number solutions. 
+			\subparagraph{\textbf{Solution}} When put through a program I wrote (included in my CS .zip file), I discovered several small number solutions. 
 			\[ \begin{bmatrix} 13^4 & 5^2 \\ 67^2 & 2^2\end{bmatrix} 
 				\text{ and } 
 				\begin{bmatrix} 13^2 & 5^2 \\ 67^2 & 26^2 \end{bmatrix} \]
 			
 			\item[(b)] Do there exists any such matrices with determinant 1? If so, comment on how many there could be. (Possible hint: use the theory of Pell equations.)
 			
-			\subparagraph{\textit{Solution}} Yes. Given:
+			\subparagraph{\textbf{Solution}} Yes. Given:
 			
 			\begin{empheq}{align}
 			 \det\begin{bmatrix} a & b \\ c & d \end{bmatrix}=a\cdot d-b\cdot c \\
@@ -338,7 +338,7 @@
 		\begin{enumerate}
 			\item[(a)] Determine all possible values of $S$ as $X$ varies, in terms of $a,b,c$.
 			
-			\subparagraph{\textit{Solution}} Heron's formula can be used to represent $[\triangle ABC]$ as $T$:
+			\subparagraph{\textbf{Solution}} Heron's formula can be used to represent $[\triangle ABC]$ as $T$:
 			\[ T=\frac{1}{4}\sqrt{(a+b+c)(-a+b+c)(a-b+c)(a+b-c)} \]
 			The greatest value $T$ could be occurs when $X$ lies directly on one of the three vertices, since $T=\frac{1}{3}A$. On the other hand, the smallest potential $T$ value occurs when $X$ is at the median of the triangle, since that is when $T_a=T_b=T_c=\frac{1}{9}A=T$. Combining these two concepts provides us with a range in terms of $a,b,c$:
 			\[ T=\frac{1}{4}\sqrt{(a+b+c)(-a+b+c)(a-b+c)(a+b-c)} \]
@@ -346,7 +346,7 @@
 			
 			\item[(b)] Determine all possible values of $p$ as $X$ varies, in terms of $a,b,c$.
 			
-			\subparagraph{\textit{Solution}} As described by the problem, the inner lines are parallel to their respective outer lines. Therefore, the intersections of the parallel lines create three parallelograms. Given that an aspect of a parallelogram is having two pairs of congruent opposite sides, the line segments $c_1,c_3,a_1,a_3,b_1,b_3$ are all congruent to sides of the the three triangles.
+			\subparagraph{\textbf{Solution}} As described by the problem, the inner lines are parallel to their respective outer lines. Therefore, the intersections of the parallel lines create three parallelograms. Given that an aspect of a parallelogram is having two pairs of congruent opposite sides, the line segments $c_1,c_3,a_1,a_3,b_1,b_3$ are all congruent to sides of the the three triangles.
 			\begin{center}
 				\begin{tikzpicture}
 				\draw
